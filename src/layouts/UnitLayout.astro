@@ -19,7 +19,12 @@ const unitWorkbooks: Record<string, string> = {
   'forces': `${base}materials/sci6-forces-workbook-v1.html`,
 };
 
+const unitNotes: Record<string, string> = {
+  'matter': `${base}materials/sci6-matter-notes-v1.html`,
+};
+
 const materials = [
+  ...(unitNotes[slug] ? [{ label: 'Unit Notes', href: unitNotes[slug], icon: '📋', external: true }] : []),
   ...(unitWorkbooks[slug] ? [{ label: 'Unit Workbook', href: unitWorkbooks[slug], icon: '📓', external: true }] : []),
   { label: 'Year Notes', href: `${base}materials/sci6-year-notes-v1.html`, icon: '📋', external: true },
   { label: 'Year Notes — Easy Read', href: `${base}materials/sci6-year-notes-ef-v1.html`, icon: '📄', external: true },
