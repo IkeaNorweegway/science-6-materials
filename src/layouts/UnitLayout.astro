@@ -33,8 +33,18 @@ const unitNotes: Record<string, string> = {
   'space': `${base}materials/sci6-space-notes-v1.html`,
 };
 
+const unitNotesEF: Record<string, string> = {
+  'matter': `${base}materials/sci6-matter-notes-ef-v1.html`,
+  'living-systems': `${base}materials/sci6-living-systems-notes-ef-gr6-v1.html`,
+  'forces': `${base}materials/sci6-forces-notes-ef-v1.html`,
+  'climate': `${base}materials/sci6-climate-notes-ef-v1.html`,
+  'energy-resources': `${base}materials/sci6-energy-resources-notes-ef-v1.html`,
+  'space': `${base}materials/sci6-space-notes-ef-v1.html`,
+};
+
 const materials = [
   ...(unitNotes[slug] ? [{ label: 'Unit Notes', href: unitNotes[slug], icon: '📋', external: true }] : []),
+  ...(unitNotesEF[slug] ? [{ label: 'Unit Notes — Easy Read', href: unitNotesEF[slug], icon: '📄', external: true }] : []),
   ...(unitWorkbooks[slug] ? [{ label: 'Unit Workbook', href: unitWorkbooks[slug], icon: '📓', external: true }] : []),
   { label: 'Year Notes', href: `${base}materials/sci6-year-notes-v1.html`, icon: '📋', external: true },
   { label: 'Year Notes — Easy Read', href: `${base}materials/sci6-year-notes-ef-v1.html`, icon: '📄', external: true },
