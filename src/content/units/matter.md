@@ -14,16 +14,18 @@ csConnection: The particle model is itself an abstraction — a simplified versi
 
 ## What this unit is about
 
-Everything around you is made of particles — tiny pieces of matter too small to see. How those particles move and interact determines whether something is a solid, liquid, or gas — and what happens when you heat or cool it.
+Everything is made of tiny pieces called particles. They are too small to see. But they are always moving.
 
-This unit builds the **particle model of matter**: the most important mental model in all of physical science.
+When things get hot, the particles speed up. When things get cold, they slow down. That is why things can be a solid, a liquid, or a gas — and why they can change from one to another.
 
-## Key knowledge clusters
+In this unit, you will learn to think like a scientist. You will use the **particle model** to explain what you see in the world around you.
 
-1. **Particle model** — heating causes particles to move faster; cooling slows them down. Faster movement means weaker attractive forces and more space between particles.
+## What you will learn
 
-2. **Phase changes** — solid → liquid → gas (and back). The state changes; the mass does not.
+1. **Particles are always moving** — heat makes them move faster. Cold makes them move slower. When they move faster, they spread out more.
 
-3. **Thermometers and the Celsius scale** — expansion and contraction of liquids as a measurement tool. 0°C = freezing point of water. 100°C = boiling point.
+2. **Solids, liquids, and gases** — matter can change from one to another. Ice melts into water. Water boils into steam. The stuff does not change. Only the way the particles move changes.
 
-4. **Expansion, contraction, and water's anomaly** — most matter expands when heated. Water is the exception: it expands when it freezes, making ice less dense than liquid water. This has enormous consequences for life on Earth.
+3. **Thermometers** — liquids expand when they heat up. That is how a thermometer works. 0°C is when water freezes. 100°C is when it boils.
+
+4. **One strange thing about water** — most things shrink when they get cold. Water does the opposite. When water freezes, it expands. That is why ice floats. That is why fish can survive under a frozen lake.

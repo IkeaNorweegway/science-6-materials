@@ -13,14 +13,16 @@ csConnection: Technology is both an energy consumer and an energy enabler. Impac
 
 ## What this unit is about
 
-Alberta is an energy province. The decisions we make about which energy resources to use — and how — have environmental, social, and economic consequences. This unit builds the knowledge to evaluate those decisions.
+Everything you do uses energy. Turning on a light. Heating your home. Riding in a car. Where does that energy come from?
 
-The key conceptual move: **before vs. after processing** is not the same as renewable vs. non-renewable. Wind can be used both ways.
+Alberta is one of the biggest energy producers in the world. That is a big deal. It also means the choices Alberta makes about energy matter — for the environment, for communities, and for the future.
 
-## Key knowledge clusters
+In this unit, you will learn about different energy resources and how to think about choosing between them. There is no perfect energy source. Every choice has trade-offs.
 
-1. **Selection factors** — availability, societal impact, economic impact, environmental impact. Responsible management of resources.
+## What you will learn
 
-2. **Before and after processing** — some resources are used directly (wood, wind, water). Many are processed into electricity. Some (like wind) can be used both ways.
+1. **Renewable and non-renewable** — some resources run out (coal, oil, gas). Some can be replaced (wind, sunlight, water). Knowing the difference is the starting point.
 
-3. **Energy in daily life** — heating, cooling, lighting, cooking, transportation. Alberta's energy landscape in context.
+2. **Before and after processing** — some energy sources are used right away (burn the wood, spin the turbine). Others are turned into electricity first. Wind is interesting — it can be used both ways.
+
+3. **How to pick an energy resource** — you will use five questions: Is it available here? How does it affect people? What does it cost? What does it do to the environment? Are we managing it responsibly? Alberta's own energy decisions are the case study.

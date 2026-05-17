@@ -14,16 +14,18 @@ csConnection: Radars, weather satellites, and computer modelling are already emb
 
 ## What this unit is about
 
-Climate is the long-term pattern of weather in a region. It is shaped by the Sun, Earth's systems, geography, and increasingly, human activity. This unit builds understanding of how those forces interact — and how we know what we know about climate change.
+Weather is what happens outside today. Climate is the bigger pattern — what a place is like over many years. They are not the same thing.
 
-Indigenous Knowledge Keepers and scientists both contribute to our understanding of climate change. This unit treats both as legitimate and complementary sources of evidence.
+Earth's climate is changing. In this unit, you will learn why. You will look at natural causes and human causes. You will look at what is already happening here in Alberta.
 
-## Key knowledge clusters
+Scientists use data to track climate. Indigenous Knowledge Keepers use generations of observation. Both are important. This unit takes both seriously.
 
-1. **Earth systems and climate** — how the Sun, clouds, ice, and greenhouse gases interact to produce climate. Geographic factors: latitude, proximity to water, elevation.
+## What you will learn
 
-2. **Causes of climate change** — natural (volcanic, meteoric, orbital, solar) and human (industrialization, greenhouse gas emissions).
+1. **What shapes climate** — the Sun warms the Earth. Greenhouse gases trap some of that heat. Where you live — how far north, how close to water, how high up — shapes your local climate.
 
-3. **Effects of climate change** — weather extremes, migration patterns, water resources, wildfires, agriculture, FNMI traditional land practices.
+2. **What causes climate change** — some causes are natural: volcanoes, shifts in Earth's orbit. Some causes are human: burning fossil fuels adds greenhouse gases to the air.
 
-4. **Measuring climate change** — long-term data, oral narratives, ice cores, satellite imagery. Technologies for tracking and predicting extreme weather.
+3. **What is already changing** — more wildfires. Glaciers melting. Seasons shifting. These changes affect how people, animals, and plants live — including Indigenous communities who depend on the land.
+
+4. **How we measure it** — scientists use thermometers, ice cores, and satellites. Elders and Knowledge Keepers use stories and memory passed down through generations. Together, they give us a fuller picture.

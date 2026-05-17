@@ -15,18 +15,18 @@ csConnection: Scratch simulation of a food web uses conditional structures — i
 
 ## What this unit is about
 
-Ecosystems are more than a list of plants and animals. They are complex, interdependent systems where every component — living and non-living — influences every other. Remove one piece and the whole system shifts. How systems work together. 
+An ecosystem is everything living and non-living in a place — the plants, the animals, the soil, the water, the sunlight. All of it is connected. Change one thing, and everything else feels it.
 
-The conceptual peak of this unit is **photosynthesis**: the process by which plants convert light, water, and CO₂ into glucose and oxygen. This is the foundation of almost all food webs on Earth — and one of the most persistently misunderstood processes in all of biology.
+The big idea in this unit is **photosynthesis**. Plants do not eat from the soil. They make their own food using sunlight, water, and air. Almost every living thing on Earth depends on this. Getting this idea right matters.
 
-## Key knowledge clusters
+## What you will learn
 
-1. **Biotic and abiotic components** — living and non-living parts of an ecosystem and how they interact.
+1. **Living and non-living** — ecosystems are made of living things (biotic) and non-living things (abiotic). Both matter. Both affect each other.
 
-2. **Photosynthesis** — light + water + CO₂ → glucose + oxygen. Chlorophyll collects light. Glucose is stored as starch. Three controlled experiments test this directly.
+2. **How plants make food** — plants use sunlight, water, and carbon dioxide to make glucose. This is photosynthesis. The plant stores the glucose and releases oxygen. That oxygen is what you breathe.
 
-3. **Plant-animal relationships** — interdependence beyond food: oxygen, CO₂, soil erosion, habitat. Includes FNMI sacred plants and their ecological and cultural roles.
+3. **How plants and animals need each other** — it is not just about food. Animals need plants for oxygen and shelter. Plants need animals to spread seeds and break down waste. Indigenous peoples have known and cared for these relationships for a very long time.
 
-4. **Organism interactions** - mutualism - predation- competition. The many ways organisms interact 
+4. **How living things interact** — some animals help each other. Some compete. Some eat each other. All of these relationships shape how healthy an ecosystem is.
 
-5. **human impact on the environment** How have humans affected the ecosystems for the positive and negative. 
+5. **How humans affect ecosystems** — people change ecosystems. Sometimes for good. Sometimes for harm. You will look at both. 

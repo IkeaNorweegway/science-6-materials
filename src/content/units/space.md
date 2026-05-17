@@ -14,14 +14,16 @@ csConnection: Telescopes, probes, rovers, spacecraft, and computer modelling are
 
 ## What this unit is about
 
-Space is mostly empty. The distances involved are almost impossible to intuitively grasp. This unit builds accurate mental models of the solar system — what's in it, how we know, and what it would take to explore or live in it.
+Space is big. Really, really big. If the Sun were a basketball, Earth would be a tiny speck 30 metres away. Neptune would be a kilometre down the road. And the nearest star would be in another country.
 
-The Alberta connection: **Ex-Alta 1**, the first satellite put into orbit by Alberta, was designed by students and faculty at the University of Alberta and launched from the International Space Station in 2017.
+In this unit, you will learn what is in our solar system, how we explore it, and what it would actually take to live in space.
 
-## Key knowledge clusters
+There is an Alberta connection here. **Ex-Alta 1** is a small satellite built by students at the University of Alberta. It was launched from the International Space Station in 2017. Students like you built something that is orbiting Earth right now.
 
-1. **Solar system components** — Sun, planets, moons, dwarf planets (including Pluto), asteroids, comets, meteoroids. Celestial bodies that emit vs. reflect light. Scale.
+## What you will learn
 
-2. **Exploration technologies** — telescopes, satellites, probes, rovers, manned spacecraft, computer modelling. Natural vs. artificial satellites. Orbits.
+1. **What is in our solar system** — the Sun, eight planets, moons, dwarf planets (Pluto is one of them), asteroids, and comets. Some things make their own light. Most things just reflect it. You will learn to tell the difference.
 
-3. **Barriers to space** — personal, societal, technological, and environmental challenges of living and working in space.
+2. **How we explore space** — telescopes, probes, rovers, satellites, and computer models. Each tool answers different questions. You will figure out which tool to use for which job.
+
+3. **What it takes to live in space** — no air. No gravity. Radiation. Extreme cold and heat. Astronauts on the International Space Station deal with all of this every day. You will look at how — and why it is so hard.

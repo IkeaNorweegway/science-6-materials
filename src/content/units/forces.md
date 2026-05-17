@@ -14,16 +14,18 @@ csConnection: Force diagrams are abstractions of real interactions — students 
 
 ## What this unit is about
 
-Every time two objects interact, forces are involved. This unit investigates what forces are, where they come from, and what they do — inside objects and between them.
+A force is a push or a pull. Forces are everywhere. When you sit in a chair, forces are at work. When you kick a ball, forces are at work. When a bridge holds up a truck, forces are at work.
 
-The conceptual peak of this unit is **Newton's Third Law**: for every action force, there is an equal and opposite reaction force. This idea is famously difficult and worth significant instructional time.
+In this unit, you will learn where forces come from and what they do — both on the outside of things and on the inside.
 
-## Key knowledge clusters
+The big idea at the end of this unit is **Newton's Third Law**. It says: when you push on something, it pushes back just as hard. This sounds simple. It is actually one of the trickiest ideas in all of science.
 
-1. **Internal forces** — tension, compression, shear, and torsion act within an object when external forces are applied.
+## What you will learn
 
-2. **External forces** — applied force, friction, and elastic/spring force act on an object from outside. External forces cause internal forces.
+1. **Forces inside things** — when you push or pull on something, forces build up inside it. These are called tension, compression, shear, and torsion. They are what makes things bend, stretch, or break.
 
-3. **Plasticity and elasticity** — some materials permanently deform (plastic); others return to their original shape (elastic).
+2. **Forces on the outside** — some forces push from outside. You can apply a force. Friction slows things down. A spring can push or pull.
 
-4. **Newton's Third Law** — action and reaction forces are equal in magnitude and opposite in direction — but they act on *different* objects.
+3. **Elastic and plastic** — some things bounce back to their old shape when you let go (elastic). Some things stay bent or squished forever (plastic).
+
+4. **Newton's Third Law** — push on something and it pushes back. The two forces are equal. But they act on different objects. That is the part that trips people up.
