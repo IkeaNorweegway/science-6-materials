@@ -10,6 +10,7 @@ export async function getStaticPaths() {
 const { unit: unitSlug } = Astro.params;
 const entry = await getEntry('units', unitSlug!);
 if (!entry) return Astro.redirect('/404');
+const base = import.meta.env.BASE_URL;
 
 const lessons = (await getCollection('lessons'))
   .filter(l => l.data.unit === unitSlug)
@@ -35,7 +36,7 @@ const { title, tier, weeks, guidingQuestion, learningOutcome } = entry.data;
       <div class="space-y-2">
         {lessons.map(lesson => (
           <a
-            href={`/units/${unitSlug}/lesson-${String(lesson.data.lessonNumber).padStart(2,'0')}`}
+            href={`${base}units/${unitSlug}/lesson-${String(lesson.data.lessonNumber).padStart(2,'0')}`}
             class="flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3 hover:shadow-sm hover:border-science-300 transition-all group"
           >
             <span class="text-xs font-bold text-slate-400 w-14 flex-shrink-0">

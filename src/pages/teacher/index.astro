@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const units = (await getCollection('units')).sort((a, b) => a.data.order - b.data.order);
+const base = import.meta.env.BASE_URL;
 
 const unitColors: Record<string, string> = {
   'matter':           'border-l-cyan-600',
@@ -24,7 +25,7 @@ const unitColors: Record<string, string> = {
   <div class="space-y-3">
     {units.map(unit => (
       <a
-        href={`/teacher/${unit.slug}`}
+        href={`${base}teacher/${unit.slug}`}
         class={`flex items-center gap-4 bg-white rounded-xl border border-slate-200 border-l-4 ${unitColors[unit.slug] ?? 'border-l-slate-400'} px-5 py-4 hover:shadow-md transition-shadow group`}
       >
         <div class="flex-1 min-w-0">
