@@ -42,14 +42,16 @@ const unitNotesEF: Record<string, string> = {
   'space': `${base}materials/sci6-space-notes-ef-v1.html`,
 };
 
-const materials = [
-  ...(unitNotes[slug] ? [{ label: 'Unit Notes', href: unitNotes[slug], icon: '📋', external: true }] : []),
-  ...(unitNotesEF[slug] ? [{ label: 'Unit Notes — Easy Read', href: unitNotesEF[slug], icon: '📄', external: true }] : []),
-  ...(unitWorkbooks[slug] ? [{ label: 'Unit Workbook', href: unitWorkbooks[slug], icon: '📓', external: true }] : []),
-  { label: 'Year Notes', href: `${base}materials/sci6-year-notes-v1.html`, icon: '📋', external: true },
-  { label: 'Year Notes — Easy Read', href: `${base}materials/sci6-year-notes-ef-v1.html`, icon: '📄', external: true },
-  { label: 'Year Review Workbook', href: `${base}materials/sci6-year-review-workbook-gr6-v1.html`, icon: '📓', external: true },
-  { label: 'All materials →', href: `${base}materials`, icon: '', external: false },
+const unitMaterialLinks = [
+  ...(unitNotes[slug]   ? [{ label: 'Guided Notes',       href: unitNotes[slug],   icon: '📋' }] : []),
+  ...(unitNotesEF[slug] ? [{ label: 'Notes — Easy Read',  href: unitNotesEF[slug], icon: '📄' }] : []),
+  ...(unitWorkbooks[slug] ? [{ label: 'Workbook',         href: unitWorkbooks[slug], icon: '📓' }] : []),
+];
+
+const yearMaterialLinks = [
+  { label: 'Year Notes',            href: `${base}materials/sci6-year-notes-v1.html`,              icon: '📋' },
+  { label: 'Year Notes — Easy Read',href: `${base}materials/sci6-year-notes-ef-v1.html`,           icon: '📄' },
+  { label: 'Year Review Workbook',  href: `${base}materials/sci6-year-review-workbook-gr6-v1.html`, icon: '📓' },
 ];
 
 const unitColors: Record<string, { accent: string; dot: string }> = {
@@ -97,19 +99,39 @@ const colors = unitColors[slug] ?? { accent: 'border-slate-400', dot: 'bg-slate-
         <!-- Materials -->
         <div class="bg-white rounded-xl border border-slate-200 p-4">
           <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Materials</p>
-          <nav class="space-y-1">
-            {materials.map(m => (
-              <a
-                href={m.href}
-                target={m.external ? '_blank' : undefined}
-                rel={m.external ? 'noopener' : undefined}
-                class="flex items-center gap-2 text-sm text-slate-600 hover:text-science-700 py-1 rounded transition-colors"
-              >
-                {m.icon && <span class="text-base">{m.icon}</span>}
-                {m.label}
-              </a>
-            ))}
-          </nav>
+
+          {unitMaterialLinks.length > 0 && (
+            <div class="mb-3">
+              <p class="text-xs font-semibold text-slate-400 mb-1.5">This unit</p>
+              <nav class="space-y-0.5">
+                {unitMaterialLinks.map(m => (
+                  <a href={m.href} target="_blank" rel="noopener"
+                    class="flex items-center gap-2 text-sm text-slate-600 hover:text-science-700 py-1 rounded transition-colors">
+                    <span class="text-sm">{m.icon}</span>{m.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          <div class="border-t border-slate-100 pt-3 mb-3">
+            <p class="text-xs font-semibold text-slate-400 mb-1.5">All year</p>
+            <nav class="space-y-0.5">
+              {yearMaterialLinks.map(m => (
+                <a href={m.href} target="_blank" rel="noopener"
+                  class="flex items-center gap-2 text-sm text-slate-600 hover:text-science-700 py-1 rounded transition-colors">
+                  <span class="text-sm">{m.icon}</span>{m.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <div class="border-t border-slate-100 pt-3">
+            <a href={`${base}materials`}
+              class="text-xs font-semibold text-science-700 hover:text-science-900 transition-colors">
+              All materials →
+            </a>
+          </div>
         </div>
 
         {teacherMode && (
