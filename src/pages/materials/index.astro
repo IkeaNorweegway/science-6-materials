@@ -263,6 +263,58 @@ const workbookAnswerKeys = [
   },
 ];
 
+const workbookEFAnswerKeys = [
+  {
+    title: 'Matter — Easy Read Workbook Answer Key',
+    description: 'Full marking guide for the Matter Easy Read workbook. Q1–Q30 + S1–S5 with word bank answers, model responses, and acceptance notes for open response.',
+    unit: 'matter',
+    unitLabel: 'Matter',
+    href: `${base}materials/sci6-matter-workbook-ef-answers-v1.html`,
+  },
+  {
+    title: 'Forces — Easy Read Workbook Answer Key',
+    description: 'Full marking guide for the Forces Easy Read workbook. Q1–Q25 + S1–S4 with word bank answers, matching-task corrections, and model responses.',
+    unit: 'forces',
+    unitLabel: 'Forces',
+    href: `${base}materials/sci6-forces-workbook-ef-answers-v1.html`,
+  },
+  {
+    title: 'Living Systems — Easy Read Workbook Answer Key',
+    description: 'Full marking guide for the Living Systems Easy Read workbook. Q1–Q30 + S1–S5 with word bank answers and acceptance notes for open response.',
+    unit: 'living-systems',
+    unitLabel: 'Living Systems',
+    href: `${base}materials/sci6-living-systems-workbook-ef-answers-v1.html`,
+  },
+  {
+    title: 'Climate — Easy Read Workbook Answer Key',
+    description: 'Full marking guide for the Climate Easy Read workbook. Q1–Q30 + S1–S5 with word bank answers, feedback loop chains, and open response guidance.',
+    unit: 'climate',
+    unitLabel: 'Climate',
+    href: `${base}materials/sci6-climate-workbook-ef-answers-v1.html`,
+  },
+  {
+    title: 'Energy Resources — Easy Read Workbook Answer Key',
+    description: 'Full marking guide for the Energy Resources Easy Read workbook. Q1–Q24 + S1–S4 with word bank answers and selection-factor guidance.',
+    unit: 'energy-resources',
+    unitLabel: 'Energy Resources',
+    href: `${base}materials/sci6-energy-resources-workbook-ef-answers-v1.html`,
+  },
+  {
+    title: 'Space — Easy Read Workbook Answer Key',
+    description: 'Full marking guide for the Space Easy Read workbook. Q1–Q24 + S1–S4 with word bank answers, scale calculation worked examples, and open response guidance.',
+    unit: 'space',
+    unitLabel: 'Space',
+    href: `${base}materials/sci6-space-workbook-ef-answers-v1.html`,
+  },
+  {
+    title: 'Year Review — Easy Read Workbook Answer Key',
+    description: 'Full marking guide for the Year Review Easy Read workbook. Q1–Q32 + S1–S6 across all six units with word bank answers and cross-unit stretch guidance.',
+    unit: 'all-units',
+    unitLabel: 'All Units',
+    href: `${base}materials/sci6-year-review-workbook-ef-answers-v1.html`,
+  },
+];
+
 const workbooks = [
   {
     title: 'Matter Workbook',
@@ -542,8 +594,8 @@ const workbooksEF = [
 
   <!-- Workbook Answer Keys -->
   <section class="mb-12">
-    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-1">Answer Keys — Workbooks</h2>
-    <p class="text-xs text-slate-400 mb-4">Full marking guides for all workbooks — teacher copy only</p>
+    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-1">Answer Keys — Workbooks (Standard)</h2>
+    <p class="text-xs text-slate-400 mb-4">Full marking guides for all standard workbooks — teacher copy only</p>
     <div class="space-y-3">
       {workbookAnswerKeys.map(m => {
         const c = unitColors[m.unit] ?? unitColors['all-units'];
@@ -554,6 +606,39 @@ const workbooksEF = [
                 <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${c.bg} ${c.text}`}>
                   {m.unitLabel}
                 </span>
+                <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-800 text-white tracking-wide">Teacher Copy</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1">{m.title}</h3>
+              <p class="text-sm text-slate-500">{m.description}</p>
+            </div>
+            <a
+              href={m.href}
+              target="_blank"
+              rel="noopener"
+              class="flex-shrink-0 text-sm font-semibold text-science-700 hover:text-science-900 border border-science-300 hover:border-science-500 px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+            >
+              Open ↗
+            </a>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+  <!-- Easy Read Workbook Answer Keys -->
+  <section class="mb-12">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-1">Answer Keys — Easy Read Workbooks</h2>
+    <p class="text-xs text-slate-400 mb-4">Full marking guides for all Easy Read workbooks — includes word bank answers and acceptance notes — teacher copy only</p>
+    <div class="space-y-3">
+      {workbookEFAnswerKeys.map(m => {
+        const c = unitColors[m.unit] ?? unitColors['all-units'];
+        return (
+          <div class={`bg-white rounded-xl border border-slate-200 border-l-4 ${c.border} p-5 flex items-start justify-between gap-4`}>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${c.bg} ${c.text}`}>
+                  {m.unitLabel}
+                </span>
+                <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 tracking-wide">Easy Read</span>
                 <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-slate-800 text-white tracking-wide">Teacher Copy</span>
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-1">{m.title}</h3>
