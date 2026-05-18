@@ -1,0 +1,163 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const units = await getCollection('units');
+  return units.map(unit => ({ params: { unit: unit.slug } }));
+}
+
+const { unit: unitSlug } = Astro.params;
+const unitEntry = await getEntry('units', unitSlug!);
+if (!unitEntry) return Astro.redirect('/404');
+
+const teacherUnit = await getEntry('teacher-units', unitSlug!).catch(() => null);
+const teacherLessons = (await getCollection('teacher-lessons'))
+  .filter(l => l.data.unit === unitSlug)
+  .sort((a, b) => a.data.lessonNumber - b.data.lessonNumber);
+
+const base = import.meta.env.BASE_URL;
+const { title, tier, weeks, guidingQuestion } = unitEntry.data;
+
+// Explicit file refs per unit (teacher materials don't use the -gr6- suffix)
+const teacherFileRefs: Record<string, { notes: string; notesEF: string; workbook: string }> = {
+  'matter':           { notes: 'sci6-matter-notes-v1.html',                  notesEF: 'sci6-matter-notes-ef-v1.html',                  workbook: 'sci6-matter-workbook-v1.html' },
+  'forces':           { notes: 'sci6-forces-notes-v1.html',                  notesEF: 'sci6-forces-notes-ef-v1.html',                  workbook: 'sci6-forces-workbook-v1.html' },
+  'living-systems':   { notes: 'sci6-living-systems-notes-gr6-v1.html',      notesEF: 'sci6-living-systems-notes-ef-gr6-v1.html',      workbook: 'sci6-living-systems-workbook-gr6-v1.html' },
+  'climate':          { notes: 'sci6-climate-notes-v1.html',                 notesEF: 'sci6-climate-notes-ef-v1.html',                 workbook: 'sci6-climate-workbook-v1.html' },
+  'energy-resources': { notes: 'sci6-energy-resources-notes-v1.html',        notesEF: 'sci6-energy-resources-notes-ef-v1.html',        workbook: 'sci6-energy-resources-workbook-v1.html' },
+  'space':            { notes: 'sci6-space-notes-v1.html',                   notesEF: 'sci6-space-notes-ef-v1.html',                   workbook: 'sci6-space-workbook-v1.html' },
+};
+const refs = teacherFileRefs[unitSlug!] ?? teacherFileRefs['matter'];
+
+// Teacher HTML materials (to be built and placed in public/materials/)
+const teacherMaterials: { label: string; href: string; tag: string; color: string }[] = [
+  {
+    label: 'Teacher Notes — Full SHOW/SAY/CUE Guide',
+    href: `${base}materials/sci6-${unitSlug}-teachernotes-v1.html`,
+    tag: 'Teacher Notes',
+    color: 'border-l-amber-500 bg-amber-50',
+  },
+  {
+    label: 'Notes Answer Key',
+    href: `${base}materials/sci6-${unitSlug}-notes-answers-v1.html`,
+    tag: 'Answer Key',
+    color: 'border-l-rose-500 bg-rose-50',
+  },
+  {
+    label: 'Workbook Answer Key',
+    href: `${base}materials/sci6-${unitSlug}-workbook-answers-v1.html`,
+    tag: 'Answer Key',
+    color: 'border-l-rose-500 bg-rose-50',
+  },
+];
+
+const unitColors: Record<string, string> = {
+  'matter':           'border-l-cyan-500',
+  'forces':           'border-l-violet-500',
+  'living-systems':   'border-l-emerald-500',
+  'climate':          'border-l-amber-500',
+  'energy-resources': 'border-l-orange-500',
+  'space':            'border-l-indigo-500',
+};
+const borderColor = unitColors[unitSlug!] ?? 'border-l-slate-400';
+
+const TeacherContent = teacherUnit ? (await teacherUnit.render()).Content : null;
+---
+
+<BaseLayout title={`Teacher — ${title}`} teacherMode={true}>
+  <!-- Header -->
+  <div class={`border-l-4 ${borderColor} pl-5 mb-8`}>
+    <div class="flex items-center gap-2 mb-1">
+      <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Teacher Hub · Grade 6 Science</span>
+      <span class="text-xs font-semibold bg-teacher-100 text-teacher-800 px-2 py-0.5 rounded-full">
+        Tier {tier} · {weeks} weeks
+      </span>
+    </div>
+    <h1 class="text-3xl font-bold text-slate-900 mb-2">{title}</h1>
+    <p class="text-slate-500 italic text-base">{guidingQuestion}</p>
+  </div>
+
+  <!-- Teacher materials -->
+  <section class="mb-8">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3">Teaching Materials</h2>
+    <div class="space-y-2">
+      {teacherMaterials.map(m => (
+        <div class={`flex items-center justify-between gap-4 bg-white rounded-xl border border-slate-200 border-l-4 ${m.color.split(' ')[0]} p-4`}>
+          <div class="flex items-center gap-3">
+            <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${m.color.split(' ')[1]} text-slate-700`}>
+              {m.tag}
+            </span>
+            <span class="text-sm font-medium text-slate-800">{m.label}</span>
+          </div>
+          <a
+            href={m.href}
+            target="_blank"
+            rel="noopener"
+            class="flex-shrink-0 text-sm font-semibold text-teacher-700 hover:text-teacher-900 border border-teacher-300 hover:border-teacher-500 px-4 py-1.5 rounded-lg transition-colors whitespace-nowrap"
+          >
+            Open ↗
+          </a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Student materials quick access -->
+  <section class="mb-8">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3">Student Materials</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+      {[
+        { label: 'Guided Notes', href: `${base}materials/${refs.notes}` },
+        { label: 'Easy Read Notes', href: `${base}materials/${refs.notesEF}` },
+        { label: 'Workbook', href: `${base}materials/${refs.workbook}` },
+      ].map(m => (
+        <a
+          href={m.href}
+          target="_blank"
+          rel="noopener"
+          class="text-sm text-slate-600 hover:text-science-700 bg-white border border-slate-200 rounded-lg px-3 py-2.5 text-center transition-colors"
+        >
+          {m.label} ↗
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Unit guide content (from teacher-units collection) -->
+  {TeacherContent && (
+    <section class="mb-8">
+      <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Unit Overview</h2>
+      <div class="bg-white rounded-xl border border-slate-200 p-6 prose">
+        <TeacherContent />
+      </div>
+    </section>
+  )}
+
+  <!-- Lesson guides -->
+  {teacherLessons.length > 0 && (
+    <section class="mb-8">
+      <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-3">Lesson Guides</h2>
+      <div class="space-y-2">
+        {teacherLessons.map(async lesson => {
+          return (
+            <div class="bg-white border border-slate-200 rounded-lg px-4 py-3 flex items-center gap-3">
+              <span class="text-xs font-bold text-slate-400 w-16 flex-shrink-0">
+                Lesson {lesson.data.lessonNumber}
+              </span>
+              <span class="text-sm font-medium text-slate-700 flex-1">{lesson.data.title}</span>
+              {lesson.data.timing && (
+                <span class="text-xs text-slate-400">{lesson.data.timing}</span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  <!-- Back -->
+  <div class="mt-8">
+    <a href={`${base}teacher`} class="text-sm text-teacher-700 hover:text-teacher-900 font-medium">← All units</a>
+  </div>
+</BaseLayout>
