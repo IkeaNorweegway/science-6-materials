@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Climate — Easy Read Workbook | Grade 6 Science</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11pt; line-height: 1.6; color: #1e293b; background: #f8fafc; max-width: 860px; margin: 0 auto; padding: 24px 28px 60px; }
+  :root { --c: #0369a1; --cl: #e0f2fe; --cm: #0284c7; }
+  .cover { background: var(--c); color: #fff; border-radius: 10px; padding: 28px 32px 24px; margin-bottom: 28px; }
+  .cover h1 { font-size: 22pt; font-weight: 800; margin-bottom: 6px; }
+  .cover .sub { font-size: 12pt; opacity: .85; margin-bottom: 14px; }
+  .cover .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .cover .cbadge { background: rgba(255,255,255,.18); border-radius: 20px; padding: 4px 14px; font-size: 9pt; font-weight: 700; }
+  .er-tag { background: #fff; color: var(--c); border-radius: 20px; padding: 4px 14px; font-size: 9pt; font-weight: 800; }
+  .name-block { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  .name-field { border-bottom: 2px solid #cbd5e1; padding-bottom: 6px; }
+  .name-field label { font-size: 8.5pt; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 20px; }
+  .section-head { background: var(--c); color: #fff; padding: 10px 18px; border-radius: 8px 8px 0 0; font-size: 11.5pt; font-weight: 700; margin-top: 32px; display: flex; justify-content: space-between; align-items: center; }
+  .section-head span { font-size: 9pt; opacity: .8; font-weight: 400; }
+  .question { background: #fff; border: 1px solid #e2e8f0; border-top: none; padding: 16px 20px 18px; margin-bottom: 2px; }
+  .question:last-of-type { border-radius: 0 0 8px 8px; margin-bottom: 0; }
+  .q-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+  .q-num { background: var(--c); color: #fff; width: 28px; height: 28px; border-radius: 50%; font-weight: 800; font-size: 10pt; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .q-body { flex: 1; }
+  .q-text { font-size: 11pt; line-height: 1.6; margin-bottom: 8px; }
+  .badge-core { background: var(--cl); color: #0c4a6e; font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; }
+  .badge-ext { background: #fef9c3; color: #854d0e; font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; }
+  .word-bank { background: #f0f9ff; border: 1.5px solid #7dd3fc; border-radius: 6px; padding: 8px 14px; margin: 8px 0 10px; font-size: 10pt; }
+  .word-bank strong { color: #0c4a6e; font-size: 8.5pt; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 4px; }
+  .word-bank .words { color: #0c4a6e; font-weight: 600; }
+  .hint { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 6px 6px 0; padding: 8px 14px; margin: 8px 0 10px; font-size: 10pt; color: #166534; }
+  .hint strong { font-weight: 700; }
+  .resp-line { border-bottom: 1.5px solid #cbd5e1; margin: 8px 0 6px; height: 28px; }
+  .draw-area { border: 2px dashed #cbd5e1; border-radius: 6px; min-height: 110px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 10pt; font-style: italic; text-align: center; padding: 12px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 10.5pt; }
+  th { background: var(--cl); color: #0c4a6e; font-weight: 700; padding: 8px 12px; border: 1px solid #7dd3fc; text-align: left; }
+  td { padding: 8px 12px; border: 1px solid #e2e8f0; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8fafc; }
+  .ans-cell { border-bottom: 2px solid var(--c) !important; background: #fff !important; }
+  .meta-block { background: #f0f9ff; border: 1.5px solid #bae6fd; border-radius: 8px; padding: 14px 18px; margin: 24px 0 8px; }
+  .meta-block h3 { color: #0369a1; font-size: 9.5pt; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .06em; }
+  .meta-q { font-size: 11pt; margin-bottom: 8px; }
+  .stretch-header { background: #1e293b; color: #fff; padding: 10px 18px; border-radius: 8px 8px 0 0; font-size: 11.5pt; font-weight: 700; margin-top: 36px; }
+  .stretch-q { background: #fff; border: 1px solid #334155; border-top: none; padding: 16px 20px 18px; margin-bottom: 2px; }
+  .stretch-q:last-of-type { border-radius: 0 0 8px 8px; }
+  .rubric { margin-top: 36px; }
+  .rubric h2 { font-size: 13pt; font-weight: 700; color: #1e293b; margin-bottom: 12px; border-bottom: 2px solid var(--cl); padding-bottom: 6px; }
+  .blank { display: inline-block; border-bottom: 2px solid var(--c); min-width: 90px; height: 22px; vertical-align: bottom; margin: 0 3px; }
+  @media print { body { background: #fff; padding: 10px 16px; } .question, .stretch-q { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Climate — Easy Read Workbook</h1>
+  <p class="sub">Grade 6 Science · Weather vs Climate · Greenhouse Effect · Climate Change</p>
+  <div class="badges">
+    <span class="er-tag">Easy Read</span>
+    <span class="cbadge">30 Questions</span>
+    <span class="cbadge">5 Stretch Questions</span>
+    <span class="cbadge">Self-Check at the End</span>
+  </div>
+</div>
+
+<div class="name-block">
+  <div class="name-field"><label>Name</label></div>
+  <div class="name-field"><label>Date</label></div>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<div class="section-head">Section 1 — Weather, Climate, and the Greenhouse Effect <span>Questions 1–10</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">1</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Sort each item. Write "Weather" or "Climate" in the table.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Weather · Climate</span></div>
+      <div class="hint"><strong>Hint:</strong> Weather is what is happening outside right now. Climate is the long-term pattern over 30+ years.</div>
+      <table>
+        <tr><th>Example</th><th>Weather or Climate?</th></tr>
+        <tr><td>It is raining today in Calgary.</td><td class="ans-cell"></td></tr>
+        <tr><td>Alberta gets cold winters on average.</td><td class="ans-cell"></td></tr>
+        <tr><td>There was a snowstorm last Tuesday.</td><td class="ans-cell"></td></tr>
+        <tr><td>The Amazon rainforest is hot and humid year-round.</td><td class="ans-cell"></td></tr>
+        <tr><td>The temperature today is 22°C.</td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">2</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> The greenhouse effect keeps Earth warm. Label the steps in the diagram below.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;sun's energy · Earth's surface · greenhouse gases · re-radiated as heat · warms Earth</span></div>
+      <div class="hint"><strong>Hint:</strong> The greenhouse gases act like a blanket. They trap heat near Earth's surface.</div>
+      <ol style="margin:10px 0 8px;padding-left:22px;line-height:2;">
+        <li><span class="blank" style="min-width:160px"></span> enters the atmosphere.</li>
+        <li>It warms <span class="blank" style="min-width:140px"></span>.</li>
+        <li>The surface gives off heat. <span class="blank" style="min-width:160px"></span> trap this heat.</li>
+        <li>The heat is <span class="blank" style="min-width:160px"></span> back toward Earth.</li>
+        <li>This <span class="blank" style="min-width:120px"></span>.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">3</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student says: "It was cold last March. That proves climate change is not real." What is wrong with this thinking?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;one event · long-term trend · weather · climate · decades · evidence</span></div>
+      <div class="hint"><strong>Hint:</strong> Climate is measured over 30+ years. One cold month does not show a trend.</div>
+      <p>The error is:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">4</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Fill in the blanks about fossil fuels and greenhouse gases.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;fossil fuels · carbon dioxide · greenhouse gas · millions of years · burning · atmosphere</span></div>
+      <div class="hint"><strong>Hint:</strong> Fossil fuels stored carbon underground. Burning releases that carbon as CO₂.</div>
+      <p>Fossil fuels (coal, oil, gas) formed over <span class="blank" style="min-width:140px"></span>.</p>
+      <p><span class="blank" style="min-width:100px"></span> fossil fuels releases <span class="blank" style="min-width:120px"></span>.</p>
+      <p>Carbon dioxide is a <span class="blank" style="min-width:130px"></span>.</p>
+      <p>Too much CO₂ in the <span class="blank" style="min-width:110px"></span> traps more heat.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">5</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Why does latitude affect climate? Fill in the blanks.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;poles · equator · more direct · spread out · warmer · colder</span></div>
+      <div class="hint"><strong>Hint:</strong> The equator gets sunlight straight on. The poles get sunlight at an angle.</div>
+      <p>Near the <span class="blank"></span>, sunlight hits Earth at a direct angle. This makes the climate <span class="blank"></span>.</p>
+      <p>Near the <span class="blank"></span>, sunlight is <span class="blank"></span> over a large area. This makes the climate <span class="blank"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">6</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name three greenhouse gases. Name the main human activity that produces each one.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;carbon dioxide (CO₂) · methane (CH₄) · nitrous oxide (N₂O) · burning fossil fuels · livestock farming · fertilizers</span></div>
+      <div class="hint"><strong>Hint:</strong> Different human activities release different greenhouse gases.</div>
+      <table>
+        <tr><th>Greenhouse Gas</th><th>Main Human Activity That Produces It</th></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">7</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Oceans and forests are called "carbon sinks." What does this mean?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;absorb · carbon dioxide · store · reduce · atmosphere · carbon sink</span></div>
+      <div class="hint"><strong>Hint:</strong> A sink takes something in. A carbon sink takes in CO₂.</div>
+      <p>A carbon sink <span class="blank" style="min-width:80px"></span> CO₂ from the <span class="blank" style="min-width:110px"></span>.</p>
+      <p>This helps <span class="blank" style="min-width:80px"></span> the amount of greenhouse gas in the air.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">8</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name three things that affect local climate (not global climate). Give one example of each.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;latitude · elevation · distance from ocean · mountains · ocean currents · prevailing winds</span></div>
+      <div class="hint"><strong>Hint:</strong> Think about why Vancouver is warmer and wetter than Calgary.</div>
+      <table>
+        <tr><th>Factor</th><th>Example</th></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">9</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Two students explain why Earth's climate has changed before humans existed. Evaluate each explanation.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Correct · Partially correct · Incorrect · natural variation · volcanic eruptions · Milankovitch cycles · orbital changes</span></div>
+      <table>
+        <tr><th>Student</th><th>Explanation</th><th>Rating</th></tr>
+        <tr><td style="width:80px;font-weight:700;">Nadia</td><td>"Earth's climate has changed before because of natural cycles like changes in Earth's orbit and volcanic eruptions. These are separate from human causes."</td><td class="ans-cell"></td></tr>
+        <tr><td style="font-weight:700;">Marcus</td><td>"Earth's climate never changed before humans. All climate change is caused by humans."</td><td class="ans-cell"></td></tr>
+      </table>
+      <p style="margin-top:8px;">Fix Marcus's explanation:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">10</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> The natural greenhouse effect is necessary for life. The enhanced greenhouse effect is a problem. Explain the difference.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;natural · enhanced · too much · human activity · needed · -18°C · liveable</span></div>
+      <div class="hint"><strong>Hint:</strong> Without any greenhouse effect, Earth would be frozen. With too much, it gets too hot.</div>
+      <p>Natural greenhouse effect: <span class="blank" style="min-width:200px"></span>. Without it, Earth would be <span class="blank" style="min-width:80px"></span>.</p>
+      <p>Enhanced greenhouse effect: caused by <span class="blank" style="min-width:140px"></span>. It traps <span class="blank" style="min-width:80px"></span> heat.</p>
+    </div>
+  </div>
+</div>
+
+<!-- META 1 -->
+<div class="meta-block">
+  <h3>Check-In 1 of 3</h3>
+  <p class="meta-q">Look back at Questions 1–10. Which question was hardest? Write the number: <span class="blank" style="min-width:50px"></span></p>
+  <p class="meta-q">Write one thing you want to understand better about climate:</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<div class="section-head">Section 2 — Evidence and Feedback Loops <span>Questions 11–20</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">11</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Albedo is how much sunlight a surface reflects. Arctic ice has high albedo. Dark ocean water has low albedo. Complete the feedback loop.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;ice melts · less ice · more dark ocean · absorbs more heat · temperatures rise · albedo decreases · feedback loop</span></div>
+      <div class="hint"><strong>Hint:</strong> A feedback loop is when an effect makes itself worse (or better) over time.</div>
+      <p>Arctic temperatures rise →</p>
+      <p><span class="blank" style="min-width:140px"></span> →</p>
+      <p><span class="blank" style="min-width:180px"></span> is exposed →</p>
+      <p>Ocean <span class="blank" style="min-width:140px"></span> →</p>
+      <p><span class="blank" style="min-width:140px"></span> even more →</p>
+      <p>This is a <span class="blank" style="min-width:120px"></span> (the effect makes itself worse).</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">12</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Wildfires are becoming more common as climate changes. Fill in the cascade of effects.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;hotter · drier · more wildfires · CO₂ released · trees burn · less carbon stored · warms climate further</span></div>
+      <div class="hint"><strong>Hint:</strong> Trees store carbon. When they burn, that carbon goes into the atmosphere as CO₂.</div>
+      <p>Climate change makes temperatures <span class="blank" style="min-width:80px"></span> and conditions <span class="blank" style="min-width:80px"></span>.</p>
+      <p>This leads to <span class="blank" style="min-width:140px"></span>.</p>
+      <p>When trees burn, <span class="blank" style="min-width:120px"></span> is released.</p>
+      <p>This means <span class="blank" style="min-width:160px"></span>.</p>
+      <p>This <span class="blank" style="min-width:160px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">13</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student confuses the greenhouse effect with the ozone hole. Explain the difference clearly.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;greenhouse effect · ozone hole · heat trapping · UV radiation · different problems · greenhouse gases · ozone layer</span></div>
+      <div class="hint"><strong>Hint:</strong> The ozone layer blocks UV radiation. The greenhouse effect traps heat. These are two separate problems.</div>
+      <p>Greenhouse effect: <span class="blank" style="min-width:280px"></span></p>
+      <p>Ozone hole: <span class="blank" style="min-width:280px"></span></p>
+      <p>They are <span class="blank" style="min-width:160px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">14</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Scientists drill ice cores in Greenland. They find tiny air bubbles trapped in old ice. What can scientists learn from these bubbles?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;ancient air · CO₂ levels · past temperature · ice cores · proxy data · hundreds of thousands of years</span></div>
+      <div class="hint"><strong>Hint:</strong> Each layer of ice is one year's snowfall. Bubbles trapped air from that year.</div>
+      <p>Ice cores contain <span class="blank" style="min-width:100px"></span> trapped in bubbles.</p>
+      <p>Scientists can measure past <span class="blank" style="min-width:100px"></span> levels.</p>
+      <p>Ice cores give us data from <span class="blank" style="min-width:200px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">15</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name three types of evidence that scientists use to study past climates.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;ice cores · tree rings · coral records · ocean sediment · pollen records · historical documents</span></div>
+      <div class="hint"><strong>Hint:</strong> These are called "proxy" data. They are indirect records of past climate.</div>
+      <p>1. <span class="blank" style="min-width:180px"></span></p>
+      <p>2. <span class="blank" style="min-width:180px"></span></p>
+      <p>3. <span class="blank" style="min-width:180px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">16</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> The table below shows average global temperatures compared to the 1900 baseline. What trend do you see? Describe it.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;increasing · rising · warming trend · higher than baseline · accelerating</span></div>
+      <div class="hint"><strong>Hint:</strong> A positive number means warmer than the baseline. Look for a pattern over time.</div>
+      <table>
+        <tr><th>Decade</th><th>Temperature change (°C above baseline)</th></tr>
+        <tr><td>1900s</td><td>0.0</td></tr>
+        <tr><td>1930s</td><td>+0.1</td></tr>
+        <tr><td>1960s</td><td>+0.2</td></tr>
+        <tr><td>1990s</td><td>+0.5</td></tr>
+        <tr><td>2020s</td><td>+1.1</td></tr>
+      </table>
+      <p>The trend I see: <span class="blank" style="min-width:280px"></span></p>
+      <p>This shows that warming is <span class="blank" style="min-width:140px"></span> (getting faster).</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">17</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student says: "Climate change started in 2000." What is wrong? When did human-caused climate change really begin?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Industrial Revolution · 1800s · burning coal · since then · accelerated · not correct</span></div>
+      <div class="hint"><strong>Hint:</strong> The Industrial Revolution started in the late 1700s and early 1800s.</div>
+      <p>The student is <span class="blank" style="min-width:100px"></span>.</p>
+      <p>Human-caused climate change started around the <span class="blank" style="min-width:160px"></span>.</p>
+      <p>Since then, CO₂ emissions have <span class="blank" style="min-width:120px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">18</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Scientists use climate models to make predictions. How is a climate model like a computer program?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;inputs · outputs · simulate · variables · predict · mathematical rules · abstraction</span></div>
+      <div class="hint"><strong>Hint:</strong> A climate model takes data about the atmosphere, oceans, and land. It uses rules to predict future climate.</div>
+      <p>A climate model uses <span class="blank" style="min-width:100px"></span> (data like CO₂ and temperature) and <span class="blank" style="min-width:140px"></span>.</p>
+      <p>It <span class="blank" style="min-width:80px"></span> the future climate as <span class="blank" style="min-width:80px"></span>.</p>
+      <p>This is an example of <span class="blank" style="min-width:120px"></span> in computer science.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">19</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student says: "Climate change is a future problem. It will not affect us for many years." Is this correct? Name three effects that are already happening.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;not correct · Arctic ice melting · sea level rising · more wildfires · extreme weather · species shifting ranges · glaciers shrinking</span></div>
+      <div class="hint"><strong>Hint:</strong> Many effects of climate change are already being measured right now.</div>
+      <p>The student is <span class="blank" style="min-width:100px"></span>.</p>
+      <p>Three effects happening now:</p>
+      <p>1. <span class="blank" style="min-width:260px"></span></p>
+      <p>2. <span class="blank" style="min-width:260px"></span></p>
+      <p>3. <span class="blank" style="min-width:260px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">20</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Tree rings can show past climate. Wide rings mean good growing years. Narrow rings mean drought years. What would you expect to see in tree rings from a known drought period?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;narrow rings · less growth · dry conditions · tree ring proxy · drought years</span></div>
+      <div class="hint"><strong>Hint:</strong> Trees grow less when there is not enough water.</div>
+      <p>During a drought, tree rings would be <span class="blank" style="min-width:120px"></span>.</p>
+      <p>This is because <span class="blank" style="min-width:200px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- META 2 -->
+<div class="meta-block">
+  <h3>Check-In 2 of 3</h3>
+  <p class="meta-q">Look back at Questions 11–20. Name one type of climate evidence you found most interesting:</p>
+  <div class="resp-line"></div>
+  <p class="meta-q" style="margin-top:8px;">Write one thing that surprised you about climate change evidence:</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<div class="section-head">Section 3 — Applying and Evaluating <span>Questions 21–30</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">21</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name three ways that individuals can reduce their greenhouse gas emissions.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;use public transit · eat less meat · reduce flying · use renewable energy · reduce waste · buy local food</span></div>
+      <div class="hint"><strong>Hint:</strong> Think about the biggest sources of personal CO₂ emissions: transport, food, and energy.</div>
+      <p>1. <span class="blank" style="min-width:260px"></span></p>
+      <p>2. <span class="blank" style="min-width:260px"></span></p>
+      <p>3. <span class="blank" style="min-width:260px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">22</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name two ways that governments or societies can reduce greenhouse gas emissions at a large scale.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;carbon tax · renewable energy laws · public transit investment · building codes · international agreements</span></div>
+      <div class="hint"><strong>Hint:</strong> Individual actions help, but system-level changes affect millions of people at once.</div>
+      <p>1. <span class="blank" style="min-width:280px"></span></p>
+      <p>2. <span class="blank" style="min-width:280px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">23</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> The graph below shows global temperature data from 1880–2020. There is a general upward trend. But there are some years with dips. A student says: "The dips prove climate change is stopping." What is wrong with this thinking?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;signal · noise · long-term trend · short-term variation · overall · year-to-year changes</span></div>
+      <div style="background:#f0f9ff;border:1px solid #7dd3fc;border-radius:6px;padding:12px 16px;margin:10px 0;font-family:monospace;font-size:9.5pt;line-height:1.8;">
+        Temp (°C above baseline):<br>
+        1880: 0.0 &nbsp;|&nbsp; 1920: +0.1 &nbsp;|&nbsp; 1940: +0.2 &nbsp;|&nbsp; 1945: +0.1 (dip) &nbsp;|&nbsp; 1960: +0.2 &nbsp;|&nbsp; 1980: +0.4 &nbsp;|&nbsp; 1998: +0.6 &nbsp;|&nbsp; 2000: +0.4 (dip) &nbsp;|&nbsp; 2020: +1.0
+      </div>
+      <p>The student is wrong because:</p>
+      <div class="resp-line"></div>
+      <p>The correct way to interpret the data:</p>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">24</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> What is the difference between mitigation and adaptation to climate change? Give one example of each.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;mitigation · adaptation · reduce emissions · adjust to changes · solar panels · building sea walls · switching to electric cars</span></div>
+      <div class="hint"><strong>Hint:</strong> Mitigation tries to slow climate change. Adaptation accepts that change is happening and prepares for it.</div>
+      <p>Mitigation means: <span class="blank" style="min-width:200px"></span></p>
+      <p>Example: <span class="blank" style="min-width:200px"></span></p>
+      <p>Adaptation means: <span class="blank" style="min-width:200px"></span></p>
+      <p>Example: <span class="blank" style="min-width:200px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">25</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Arctic sea ice is melting. This reduces the albedo (reflectivity) of the Arctic. Fill in the feedback loop and explain why it speeds up warming.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;less ice · more ocean exposed · darker surface · absorbs more heat · temperatures rise · albedo · positive feedback</span></div>
+      <p>Ice melts → <span class="blank" style="min-width:160px"></span> exposed →</p>
+      <p>Darker surface <span class="blank" style="min-width:140px"></span> →</p>
+      <p>This makes temperatures <span class="blank" style="min-width:80px"></span> more →</p>
+      <p>This is called a <span class="blank" style="min-width:140px"></span> loop.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">26</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Canada's north is warming faster than anywhere else. Name two effects of this faster warming on the north.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;permafrost thawing · methane released · infrastructure damaged · Indigenous communities affected · wildlife habitat changed · sea ice lost</span></div>
+      <div class="hint"><strong>Hint:</strong> The Arctic is warming 2–4 times faster than the global average.</div>
+      <p>Effect 1: <span class="blank" style="min-width:280px"></span></p>
+      <p>Effect 2: <span class="blank" style="min-width:280px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">27</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A scientist uses tree rings to study drought over 500 years. She finds that the 1930s had very narrow rings. This matches recorded weather data. What does this tell you about tree rings as evidence?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;reliable · proxy data · matches · confirms · cross-validation · tree rings are accurate</span></div>
+      <div class="hint"><strong>Hint:</strong> When two types of evidence match, it makes the evidence stronger.</div>
+      <p>This tells us that tree rings are <span class="blank" style="min-width:100px"></span> as climate evidence.</p>
+      <p>Because: <span class="blank" style="min-width:260px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">28</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Some countries produce far more greenhouse gases per person than others. Is it fair for all countries to reduce emissions by the same percentage? Explain your thinking.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;fair · unfair · historical emissions · developing countries · developed countries · climate justice</span></div>
+      <p>My position: <span class="blank" style="min-width:80px"></span></p>
+      <p>Because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">29</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Indigenous peoples along the Bow River in Alberta have noticed changes in the river over generations — timing of ice break-up, water levels, fish populations. How does this Traditional Ecological Knowledge (TEK) add to scientific climate records?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;TEK · long-term observation · generations · local knowledge · scientific data · confirms · gaps · pre-instrument era</span></div>
+      <p>TEK adds to scientific records because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <p>TEK can fill in <span class="blank" style="min-width:100px"></span> in scientific data from before instruments existed.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">30</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Design a school action plan to reduce your school's carbon footprint. Name two actions, one benefit of each, and one challenge.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;reduce electricity use · switch to renewable energy · reduce food waste · improve insulation · bike to school · plant trees</span></div>
+      <table>
+        <tr><th>Action</th><th>Benefit</th><th>Challenge</th></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- META 3 -->
+<div class="meta-block">
+  <h3>Check-In 3 of 3</h3>
+  <p class="meta-q">You just finished all 30 questions. Complete this sentence: "Climate change is already real because…"</p>
+  <div class="resp-line"></div>
+  <p class="meta-q" style="margin-top:8px;">Name one action you could take based on what you learned:</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== STRETCH ZONE ==================== -->
+<div class="stretch-header">Stretch Zone — Challenge Questions</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S1</div>
+    <div class="q-body">
+      <div class="q-text">A newspaper headline says "Scientists Disagree About Climate Change." But 97% of climate scientists agree that humans are causing warming. Explain why a headline like this can mislead people. What questions should you ask when reading science news?</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S2</div>
+    <div class="q-body">
+      <div class="q-text">Permafrost in the Arctic contains frozen organic matter. As permafrost thaws, bacteria decompose this matter and release methane (CH₄). Methane is 80× more powerful than CO₂ over 20 years. Draw the feedback loop this creates and explain why it is concerning.</div>
+      <div class="draw-area">Draw or describe the feedback loop here.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S3</div>
+    <div class="q-body">
+      <div class="q-text">Some people say we should use technology (like carbon capture machines) to fix climate change instead of changing our behaviour. What are one advantage and one disadvantage of relying on technology alone?</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S4</div>
+    <div class="q-body">
+      <div class="q-text">Climate scientists collect data from satellites, weather stations, ocean buoys, and ice cores. Why is it important to use multiple data sources? What problem could arise if you only used one source?</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S5</div>
+    <div class="q-body">
+      <div class="q-text">Choose one climate change effect (e.g., sea level rise, wildfire, drought). Describe how it affects: (1) an ecosystem, (2) a human community, (3) an Indigenous community in Canada.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SELF-ASSESSMENT ==================== -->
+<div class="rubric">
+  <h2>Self-Assessment — How Did I Do?</h2>
+  <p style="font-size:10pt;color:#64748b;margin-bottom:12px;">Circle a number to show how confident you feel.</p>
+  <table>
+    <tr><th>I can…</th><th>Not yet — 1</th><th>Getting there — 2</th><th>Got it — 3</th></tr>
+    <tr><td>Explain the difference between weather and climate</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Describe how the greenhouse effect works</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Name three types of evidence for past climate change</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Explain the albedo feedback loop</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Distinguish between mitigation and adaptation</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Read a climate data table and identify a trend</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+  </table>
+  <p style="margin-top:14px;font-size:10.5pt;"><strong>One thing I am proud of from this workbook:</strong></p>
+  <div class="resp-line"></div>
+  <p style="margin-top:10px;font-size:10.5pt;"><strong>One thing I will ask my teacher about:</strong></p>
+  <div class="resp-line"></div>
+</div>
+
+</body>
+</html>

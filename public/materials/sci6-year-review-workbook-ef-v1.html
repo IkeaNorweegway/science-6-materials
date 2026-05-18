@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Year Review — Easy Read Workbook | Grade 6 Science</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11pt; line-height: 1.6; color: #1e293b; background: #f8fafc; max-width: 860px; margin: 0 auto; padding: 24px 28px 60px; }
+  :root { --c: #1e40af; --cl: #dbeafe; --cm: #2563eb; }
+  .cover { background: var(--c); color: #fff; border-radius: 10px; padding: 28px 32px 24px; margin-bottom: 28px; }
+  .cover h1 { font-size: 22pt; font-weight: 800; margin-bottom: 6px; }
+  .cover .sub { font-size: 12pt; opacity: .85; margin-bottom: 14px; }
+  .cover .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .cover .cbadge { background: rgba(255,255,255,.18); border-radius: 20px; padding: 4px 14px; font-size: 9pt; font-weight: 700; }
+  .er-tag { background: #fff; color: var(--c); border-radius: 20px; padding: 4px 14px; font-size: 9pt; font-weight: 800; }
+  .name-block { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  .name-field { border-bottom: 2px solid #cbd5e1; padding-bottom: 6px; }
+  .name-field label { font-size: 8.5pt; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 20px; }
+  /* Unit colour bands */
+  .unit-head { color: #fff; padding: 10px 18px; border-radius: 8px 8px 0 0; font-size: 11.5pt; font-weight: 700; margin-top: 32px; display: flex; justify-content: space-between; align-items: center; }
+  .unit-head span { font-size: 9pt; opacity: .8; font-weight: 400; }
+  .u-matter   { background: #0e7490; }
+  .u-forces   { background: #6D28D9; }
+  .u-living   { background: #059669; }
+  .u-climate  { background: #0369a1; }
+  .u-energy   { background: #b45309; }
+  .u-space    { background: #4338ca; }
+  .question { background: #fff; border: 1px solid #e2e8f0; border-top: none; padding: 16px 20px 18px; margin-bottom: 2px; }
+  .question:last-of-type { border-radius: 0 0 8px 8px; margin-bottom: 0; }
+  .q-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+  .q-num { background: var(--c); color: #fff; width: 28px; height: 28px; border-radius: 50%; font-weight: 800; font-size: 10pt; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .q-num-matter  { background: #0e7490; }
+  .q-num-forces  { background: #6D28D9; }
+  .q-num-living  { background: #059669; }
+  .q-num-climate { background: #0369a1; }
+  .q-num-energy  { background: #b45309; }
+  .q-num-space   { background: #4338ca; }
+  .q-body { flex: 1; }
+  .q-text { font-size: 11pt; line-height: 1.6; margin-bottom: 8px; }
+  .badge-core { background: var(--cl); color: #1e3a8a; font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; }
+  .badge-ext { background: #fef9c3; color: #854d0e; font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; }
+  .badge-unit { font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; color: #fff; }
+  .bu-matter  { background: #0e7490; }
+  .bu-forces  { background: #6D28D9; }
+  .bu-living  { background: #059669; }
+  .bu-climate { background: #0369a1; }
+  .bu-energy  { background: #b45309; }
+  .bu-space   { background: #4338ca; }
+  .word-bank { background: #eff6ff; border: 1.5px solid #93c5fd; border-radius: 6px; padding: 8px 14px; margin: 8px 0 10px; font-size: 10pt; }
+  .word-bank strong { color: #1e3a8a; font-size: 8.5pt; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 4px; }
+  .word-bank .words { color: #1e3a8a; font-weight: 600; }
+  .hint { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 6px 6px 0; padding: 8px 14px; margin: 8px 0 10px; font-size: 10pt; color: #166534; }
+  .hint strong { font-weight: 700; }
+  .resp-line { border-bottom: 1.5px solid #cbd5e1; margin: 8px 0 6px; height: 28px; }
+  .draw-area { border: 2px dashed #cbd5e1; border-radius: 6px; min-height: 100px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 10pt; font-style: italic; text-align: center; padding: 12px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 10.5pt; }
+  th { background: var(--cl); color: #1e3a8a; font-weight: 700; padding: 8px 12px; border: 1px solid #93c5fd; text-align: left; }
+  td { padding: 8px 12px; border: 1px solid #e2e8f0; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8fafc; }
+  .ans-cell { border-bottom: 2px solid var(--c) !important; background: #fff !important; }
+  .meta-block { background: #eff6ff; border: 1.5px solid #93c5fd; border-radius: 8px; padding: 14px 18px; margin: 24px 0 8px; }
+  .meta-block h3 { color: #1e3a8a; font-size: 9.5pt; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .06em; }
+  .meta-q { font-size: 11pt; margin-bottom: 8px; }
+  .stretch-header { background: #1e293b; color: #fff; padding: 10px 18px; border-radius: 8px 8px 0 0; font-size: 11.5pt; font-weight: 700; margin-top: 36px; }
+  .stretch-q { background: #fff; border: 1px solid #334155; border-top: none; padding: 16px 20px 18px; margin-bottom: 2px; }
+  .stretch-q:last-of-type { border-radius: 0 0 8px 8px; }
+  .rubric { margin-top: 36px; }
+  .rubric h2 { font-size: 13pt; font-weight: 700; color: #1e293b; margin-bottom: 12px; border-bottom: 2px solid var(--cl); padding-bottom: 6px; }
+  .rubric table td:first-child { color: var(--c); font-weight: 700; }
+  .blank { display: inline-block; border-bottom: 2px solid var(--c); min-width: 90px; height: 22px; vertical-align: bottom; margin: 0 3px; }
+  @media print { body { background: #fff; padding: 10px 16px; } .question, .stretch-q { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Year Review — Easy Read Workbook</h1>
+  <p class="sub">Grade 6 Science · All Six Units · End-of-Year Review</p>
+  <div class="badges">
+    <span class="er-tag">Easy Read</span>
+    <span class="cbadge">32 Questions</span>
+    <span class="cbadge">6 Stretch Questions</span>
+    <span class="cbadge">Self-Check at the End</span>
+  </div>
+</div>
+
+<div class="name-block">
+  <div class="name-field"><label>Name</label></div>
+  <div class="name-field"><label>Date</label></div>
+</div>
+
+<!-- ==================== UNIT 1: MATTER ==================== -->
+<div class="unit-head u-matter">Unit 1 — Matter <span>Questions 1–5</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-matter">1</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-matter">Matter</span> The particle model has four key ideas. Fill in the missing words.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;all matter · always moving · empty space · different properties</span></div>
+      <div class="hint"><strong>Hint:</strong> Review the four key ideas: make up all matter, always moving, spaces between, different properties.</div>
+      <ol style="margin:10px 0;padding-left:22px;line-height:2.4;">
+        <li>Particles make up <span class="blank" style="min-width:120px"></span>.</li>
+        <li>Particles are <span class="blank" style="min-width:120px"></span>.</li>
+        <li>Particles have <span class="blank" style="min-width:120px"></span> between them.</li>
+        <li>Different particles have <span class="blank" style="min-width:140px"></span>.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-matter">2</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-matter">Matter</span> Label the phase changes in the diagram below.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;melting · freezing · evaporation · condensation · sublimation</span></div>
+      <div class="hint"><strong>Hint:</strong> Melting and evaporation add energy. Freezing and condensation remove energy.</div>
+      <div style="margin:14px 0;font-size:10pt;line-height:2.4;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:14px 20px;">
+        <div>SOLID —[ A: <span class="blank" style="min-width:90px"></span> ]→ LIQUID —[ B: <span class="blank" style="min-width:90px"></span> ]→ GAS</div>
+        <div>SOLID ←[ C: <span class="blank" style="min-width:90px"></span> ]— LIQUID ←[ D: <span class="blank" style="min-width:90px"></span> ]— GAS</div>
+        <div>SOLID —[ E: <span class="blank" style="min-width:90px"></span> ]→ GAS &nbsp;(skips liquid)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-matter">3</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-matter">Matter</span> A student has 75 g of ice. It melts completely. What is the mass of the water? Explain why.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;75 g · more than 75 g · less than 75 g · conservation of mass · particles do not disappear</span></div>
+      <div class="hint"><strong>Hint:</strong> Particles do not disappear when matter changes state.</div>
+      <p>Mass of the water: <span class="blank" style="min-width:80px"></span></p>
+      <p>Because: <span class="blank" style="min-width:300px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-matter">4</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-matter">Matter</span> Why does ice float on liquid water? Use the particle model in your answer.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;more spread out · less dense · floats · liquid water · denser · same mass</span></div>
+      <div class="hint"><strong>Hint:</strong> Ice particles are arranged differently than liquid water particles. Same mass, more volume = lower density.</div>
+      <p>In ice, particles are <span class="blank" style="min-width:120px"></span> than in liquid water.</p>
+      <p>This makes ice <span class="blank" style="min-width:90px"></span> (lower density).</p>
+      <p>Less dense things <span class="blank" style="min-width:80px"></span> on denser liquids.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-matter">5</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> <span class="badge-unit bu-matter">Matter</span> Water gets into a crack in a rock. The water freezes. The crack gets bigger. Use the particle model to explain why.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;expands · more space · pushes · crack widens · freeze-thaw weathering · particles spread out</span></div>
+      <p>When water freezes it <span class="blank" style="min-width:80px"></span> (takes up more space).</p>
+      <p>The ice <span class="blank" style="min-width:80px"></span> against the rock.</p>
+      <p>The <span class="blank" style="min-width:80px"></span> gets bigger over time.</p>
+      <p>This process is called <span class="blank" style="min-width:180px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== UNIT 2: FORCES ==================== -->
+<div class="unit-head u-forces">Unit 2 — Forces <span>Questions 6–10</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-forces">6</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-forces">Forces</span> Name the five external forces. Give one example of each.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;applied force · friction · elastic force · gravity · normal force</span></div>
+      <div class="hint"><strong>Hint:</strong> External forces act on an object from outside.</div>
+      <table>
+        <tr><th>Force</th><th>One Example</th></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-forces">7</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-forces">Forces</span> Name the four internal forces. Write one sentence to describe each.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;tension · compression · shear · torsion · stretching · squishing · sliding · twisting</span></div>
+      <div class="hint"><strong>Hint:</strong> Internal forces act inside a material when external forces are applied.</div>
+      <table>
+        <tr><th>Internal Force</th><th>One-Sentence Description</th></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-forces">8</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-forces">Forces</span> A 15 N force pushes right. A 6 N force pushes left. Calculate the net force. State its size and direction.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;9 N · right · subtract · net force</span></div>
+      <div class="hint"><strong>Hint:</strong> When forces act in opposite directions, subtract. The net force points the same way as the bigger force.</div>
+      <p>Net force = <span class="blank" style="min-width:50px"></span> N − <span class="blank" style="min-width:50px"></span> N = <span class="blank" style="min-width:50px"></span> N to the <span class="blank" style="min-width:60px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-forces">9</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-forces">Forces</span> State Newton's Third Law. Give two real examples of action-reaction pairs.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;equal and opposite · different objects · for every action · reaction · jumping · rowing · rocket</span></div>
+      <div class="hint"><strong>Hint:</strong> The reaction force is always equal in size and opposite in direction to the action force.</div>
+      <p>Newton's Third Law: <span class="blank" style="min-width:350px"></span></p>
+      <p>Example 1: <span class="blank" style="min-width:350px"></span></p>
+      <p>Example 2: <span class="blank" style="min-width:350px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-forces">10</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> <span class="badge-unit bu-forces">Forces</span> A student bends a paper clip a little — it springs back. Then bends it a lot — it stays bent. Explain using the elastic limit.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;elastic deformation · plastic deformation · elastic limit · below · above · returns · keeps</span></div>
+      <p>Small bend: force was <span class="blank" style="min-width:70px"></span> the elastic limit → <span class="blank" style="min-width:170px"></span> → paper clip <span class="blank" style="min-width:80px"></span> to shape.</p>
+      <p>Large bend: force was <span class="blank" style="min-width:70px"></span> the elastic limit → <span class="blank" style="min-width:160px"></span> → paper clip <span class="blank" style="min-width:80px"></span> bent.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== UNIT 3: LIVING SYSTEMS ==================== -->
+<div class="unit-head u-living">Unit 3 — Living Systems <span>Questions 11–16</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-living">11</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-living">Living Systems</span> Fill in the word equation for photosynthesis.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;carbon dioxide · water · sunlight · glucose · oxygen</span></div>
+      <div class="hint"><strong>Hint:</strong> Plants take in two things and produce two things. Sunlight is the energy source.</div>
+      <div style="background:#f0fdf4;border:1px solid #6ee7b7;border-radius:8px;padding:14px 18px;margin:10px 0;font-size:11pt;text-align:center;">
+        <span class="blank" style="min-width:130px"></span> + <span class="blank" style="min-width:80px"></span>
+        <span style="font-size:9pt;color:#64748b;"> (+ <span class="blank" style="min-width:80px"></span>)</span>
+        → <span class="blank" style="min-width:90px"></span> + <span class="blank" style="min-width:90px"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-living">12</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-living">Living Systems</span> Put these organisms into a food chain. Draw arrows to show energy flow.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;grass · vole · coyote · hawk</span></div>
+      <div class="hint"><strong>Hint:</strong> Arrows point from food to eater. Energy flows in the direction of the arrow.</div>
+      <div style="display:flex;align-items:center;gap:10px;margin:14px 0;flex-wrap:wrap;">
+        <div style="background:#f0fdf4;border:1.5px solid #6ee7b7;border-radius:6px;padding:8px 16px;font-weight:700;min-width:80px;text-align:center;" class="ans-cell"></div>
+        <span style="font-size:18pt;color:#059669;">→</span>
+        <div style="background:#f0fdf4;border:1.5px solid #6ee7b7;border-radius:6px;padding:8px 16px;font-weight:700;min-width:80px;text-align:center;" class="ans-cell"></div>
+        <span style="font-size:18pt;color:#059669;">→</span>
+        <div style="background:#f0fdf4;border:1.5px solid #6ee7b7;border-radius:6px;padding:8px 16px;font-weight:700;min-width:80px;text-align:center;" class="ans-cell"></div>
+        <span style="font-size:18pt;color:#059669;">→</span>
+        <div style="background:#f0fdf4;border:1.5px solid #6ee7b7;border-radius:6px;padding:8px 16px;font-weight:700;min-width:80px;text-align:center;" class="ans-cell"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-living">13</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-living">Living Systems</span> A student says: "Plants get their food from soil." A second student says: "All living things do cellular respiration." Evaluate each statement.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Correct · Incorrect · photosynthesis · from the air and sunlight · all living cells · not from the soil</span></div>
+      <div class="hint"><strong>Hint:</strong> Plants make their food using sunlight, CO₂, and water — not soil.</div>
+      <p>Student 1 is <span class="blank" style="min-width:100px"></span>. Why: <span class="blank" style="min-width:250px"></span></p>
+      <p>Student 2 is <span class="blank" style="min-width:100px"></span>. Why: <span class="blank" style="min-width:250px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-living">14</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> <span class="badge-unit bu-living">Living Systems</span> Wolves were removed from Yellowstone. Elk ate all the riverside plants. Rivers changed course. Wolves were returned in 1995. Rivers recovered. Explain the cascade in four steps.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;wolves returned · elk moved · riverside plants grew · riverbanks stabilized · rivers recovered · trophic cascade</span></div>
+      <p>Step 1: <span class="blank" style="min-width:350px"></span></p>
+      <p>Step 2: <span class="blank" style="min-width:350px"></span></p>
+      <p>Step 3: <span class="blank" style="min-width:350px"></span></p>
+      <p>Step 4: <span class="blank" style="min-width:350px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-living">15</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-living">Living Systems</span> Sweetgrass grows in healthy wetlands. Indigenous peoples use it in ceremonies and medicine. What happens to sweetgrass if a wetland is drained? Connect to ecosystem and cultural loss.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;habitat loss · disappears · cultural knowledge · medicinal plants · Indigenous practices</span></div>
+      <div class="hint"><strong>Hint:</strong> Ecosystem loss and cultural loss are connected. When habitats are lost, so are the practices that depend on them.</div>
+      <p>When the wetland drains: <span class="blank" style="min-width:300px"></span></p>
+      <p>This also affects: <span class="blank" style="min-width:300px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-living">16</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> <span class="badge-unit bu-living">Living Systems</span> An invasive insect kills aspen trees in Alberta. Predict the cascade of effects on two other species.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;aspen dies · woodpeckers · moose · habitat loss · food web disruption · decrease</span></div>
+      <p>Insect arrives → aspen trees die →</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== UNIT 4: CLIMATE ==================== -->
+<div class="unit-head u-climate">Unit 4 — Climate <span>Questions 17–21</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-climate">17</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-climate">Climate</span> Describe the greenhouse effect in four steps.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;sun's energy · Earth's surface · greenhouse gases · re-radiated · warms Earth</span></div>
+      <div class="hint"><strong>Hint:</strong> Greenhouse gases act like a blanket around Earth.</div>
+      <ol style="margin:10px 0;padding-left:22px;line-height:2.4;">
+        <li><span class="blank" style="min-width:150px"></span> enters the atmosphere.</li>
+        <li>It heats <span class="blank" style="min-width:140px"></span>.</li>
+        <li><span class="blank" style="min-width:160px"></span> trap the heat that the surface gives off.</li>
+        <li>Heat is <span class="blank" style="min-width:120px"></span> back toward Earth. This <span class="blank" style="min-width:120px"></span>.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-climate">18</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-climate">Climate</span> A student says: "It was cold last March. Climate change must be fake." What is wrong with this thinking?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;one event · long-term trend · weather · climate · decades of data · does not prove</span></div>
+      <div class="hint"><strong>Hint:</strong> Climate is measured over 30+ years. One cold month is just weather.</div>
+      <p>The error is: <span class="blank" style="min-width:350px"></span></p>
+      <p>Climate change is shown by: <span class="blank" style="min-width:300px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-climate">19</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-climate">Climate</span> The table below shows temperature data. What trend do you see? Describe it in one sentence.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;rising · warming trend · accelerating · above baseline · increasing</span></div>
+      <table>
+        <tr><th>Decade</th><th>Temperature above 1900 baseline (°C)</th></tr>
+        <tr><td>1900s</td><td>0.0</td></tr>
+        <tr><td>1960s</td><td>+0.2</td></tr>
+        <tr><td>1990s</td><td>+0.5</td></tr>
+        <tr><td>2020s</td><td>+1.1</td></tr>
+      </table>
+      <p>The trend: <span class="blank" style="min-width:350px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-climate">20</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> <span class="badge-unit bu-climate">Climate</span> The Arctic albedo feedback loop is speeding up warming. Complete the loop.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;ice melts · less ice · dark ocean exposed · absorbs more heat · temperatures rise · positive feedback loop</span></div>
+      <p>Temperatures rise → <span class="blank" style="min-width:120px"></span> → <span class="blank" style="min-width:180px"></span> →</p>
+      <p>Dark ocean <span class="blank" style="min-width:140px"></span> → temperatures <span class="blank" style="min-width:80px"></span> more.</p>
+      <p>This is a <span class="blank" style="min-width:180px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-climate">21</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-climate">Climate</span> Indigenous peoples along the Bow River notice changes over generations — ice break-up timing, water levels, fish. How does this Traditional Ecological Knowledge (TEK) add to scientific data?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;long-term observations · before instruments · local knowledge · fills gaps · confirms scientific data · generations</span></div>
+      <div class="hint"><strong>Hint:</strong> TEK records changes over centuries. Scientific instruments are only a few decades old in many places.</div>
+      <p>TEK adds to science because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== UNIT 5: ENERGY RESOURCES ==================== -->
+<div class="unit-head u-energy">Unit 5 — Energy Resources <span>Questions 22–26</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-energy">22</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-energy">Energy Resources</span> Sort each energy source. Write "Renewable" or "Non-Renewable."</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Renewable · Non-Renewable</span></div>
+      <div class="hint"><strong>Hint:</strong> Renewable = can be replaced in a short time. Non-renewable = took millions of years to form.</div>
+      <table>
+        <tr><th>Source</th><th>Renewable or Non-Renewable?</th></tr>
+        <tr><td>Coal</td><td class="ans-cell"></td></tr>
+        <tr><td>Solar</td><td class="ans-cell"></td></tr>
+        <tr><td>Wind</td><td class="ans-cell"></td></tr>
+        <tr><td>Natural gas</td><td class="ans-cell"></td></tr>
+        <tr><td>Hydroelectric</td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-energy">23</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-energy">Energy Resources</span> Name the five factors for choosing an energy source.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;cost · availability · reliability · environmental impact · efficiency</span></div>
+      <div class="hint"><strong>Hint:</strong> Think about the five questions you ask before choosing an energy source.</div>
+      <p>1. <span class="blank" style="min-width:160px"></span> &nbsp; 2. <span class="blank" style="min-width:160px"></span> &nbsp; 3. <span class="blank" style="min-width:160px"></span></p>
+      <p>4. <span class="blank" style="min-width:160px"></span> &nbsp; 5. <span class="blank" style="min-width:160px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-energy">24</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-energy">Energy Resources</span> A student says: "Solar energy is free." A second student says: "Solar energy costs nothing to install." Evaluate each statement.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Correct · Incorrect · sunlight is free · panels cost money · installation costs · maintenance</span></div>
+      <p>Student 1 is <span class="blank" style="min-width:100px"></span>. Why: <span class="blank" style="min-width:250px"></span></p>
+      <p>Student 2 is <span class="blank" style="min-width:100px"></span>. Why: <span class="blank" style="min-width:250px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-energy">25</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> <span class="badge-unit bu-energy">Energy Resources</span> Two communities need electricity. Community A: sunny southern Alberta. Community B: remote northern Alberta, forested, cloudy. Recommend one energy source for each and explain your choice using two selection factors.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;solar · biomass · wind · availability · reliability · cost · environmental impact</span></div>
+      <p>Community A: <span class="blank" style="min-width:120px"></span> because <span class="blank" style="min-width:260px"></span></p>
+      <p>Community B: <span class="blank" style="min-width:120px"></span> because <span class="blank" style="min-width:260px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-energy">26</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-energy">Energy Resources</span> Oil must be processed before use. Name two steps to turn crude oil into usable fuel.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;extracting · separating · upgrading · refining · diluting · processing</span></div>
+      <div class="hint"><strong>Hint:</strong> Crude oil is too thick and impure to use directly as fuel.</div>
+      <p>Step 1: <span class="blank" style="min-width:280px"></span></p>
+      <p>Step 2: <span class="blank" style="min-width:280px"></span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== UNIT 6: SPACE ==================== -->
+<div class="unit-head u-space">Unit 6 — Space <span>Questions 27–32</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-space">27</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-space">Space</span> Name the eight planets in order from the sun.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Mercury · Venus · Earth · Mars · Jupiter · Saturn · Uranus · Neptune</span></div>
+      <div class="hint"><strong>Hint:</strong> My Very Eager Mother Just Served Us Nachos.</div>
+      <p style="line-height:2.6;">
+        1. <span class="blank" style="min-width:100px"></span> &nbsp;
+        2. <span class="blank" style="min-width:100px"></span> &nbsp;
+        3. <span class="blank" style="min-width:100px"></span> &nbsp;
+        4. <span class="blank" style="min-width:100px"></span><br>
+        5. <span class="blank" style="min-width:100px"></span> &nbsp;
+        6. <span class="blank" style="min-width:100px"></span> &nbsp;
+        7. <span class="blank" style="min-width:100px"></span> &nbsp;
+        8. <span class="blank" style="min-width:100px"></span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-space">28</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-space">Space</span> What is the difference between a natural satellite and an artificial satellite? Give one example of each.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;natural satellite · artificial satellite · Earth's Moon · ISS · GPS satellite · orbits · made by humans · formed naturally</span></div>
+      <div class="hint"><strong>Hint:</strong> Both types orbit another object. The difference is how they got there.</div>
+      <p>Natural satellite: <span class="blank" style="min-width:250px"></span>. Example: <span class="blank" style="min-width:130px"></span></p>
+      <p>Artificial satellite: <span class="blank" style="min-width:250px"></span>. Example: <span class="blank" style="min-width:130px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-space">29</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-space">Space</span> A student says: "We can see the Moon because it glows with its own light." Is this correct? Explain what we actually see.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;not correct · reflects sunlight · does not produce light · stars emit light · the Moon is not a star</span></div>
+      <div class="hint"><strong>Hint:</strong> Only stars produce their own light. The Moon reflects sunlight.</div>
+      <p>The student is <span class="blank" style="min-width:100px"></span>.</p>
+      <p>We see the Moon because: <span class="blank" style="min-width:300px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-space">30</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-space">Space</span> Why was Pluto reclassified as a dwarf planet in 2006? Was this the right decision? Explain.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;did not clear its orbit · Kuiper Belt · similar objects · new criteria · evidence-based · science updates</span></div>
+      <div class="hint"><strong>Hint:</strong> A planet must meet three criteria. Pluto met only two.</div>
+      <p>Pluto was reclassified because: <span class="blank" style="min-width:300px"></span></p>
+      <p>This was the right decision because: <span class="blank" style="min-width:300px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-space">31</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> <span class="badge-unit bu-space">Space</span> The Ex-Alta 1 satellite was built by University of Alberta students. It studied space weather. Name two reasons this project was important.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;students contributed real science · collected real data · space weather research · shows young people can do science · launched into orbit</span></div>
+      <p>Reason 1: <span class="blank" style="min-width:330px"></span></p>
+      <p>Reason 2: <span class="blank" style="min-width:330px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num q-num-space">32</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> <span class="badge-unit bu-space">Space</span> Many Indigenous peoples have studied the night sky for thousands of years. This knowledge guided navigation, ceremonies, and agriculture. How does Indigenous astronomical knowledge connect to modern science?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;long-term observations · star patterns · seasons · navigation · traditional knowledge · similar questions · complements</span></div>
+      <p>The connection:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- META FINAL -->
+<div class="meta-block">
+  <h3>Year-End Check-In</h3>
+  <p class="meta-q">Which unit was your strongest this year? <span class="blank" style="min-width:160px"></span></p>
+  <p class="meta-q" style="margin-top:8px;">Which unit do you want to review more? <span class="blank" style="min-width:160px"></span></p>
+  <p class="meta-q" style="margin-top:8px;">Write one big idea that connects two or more units:</p>
+  <div class="resp-line"></div>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== STRETCH ZONE ==================== -->
+<div class="stretch-header">Stretch Zone — Cross-Unit Challenge Questions</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S1</div>
+    <div class="q-body">
+      <div class="q-text"><strong>Matter + Forces:</strong> A bridge cable stretches under the weight of traffic. Use the particle model to explain why the cable gets longer under tension. Then explain what would happen if the force exceeded the elastic limit.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S2</div>
+    <div class="q-body">
+      <div class="q-text"><strong>Living Systems + Climate:</strong> A wetland ecosystem stores large amounts of carbon in peat (dead plant matter). If the wetland dries out due to climate change, the peat decomposes and releases CO₂. Draw the cascade of effects — starting with climate change and ending with more climate change.</div>
+      <div class="draw-area" style="min-height:90px;">Sketch or describe the feedback loop here.</div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S3</div>
+    <div class="q-body">
+      <div class="q-text"><strong>Energy Resources + Climate:</strong> Alberta is a major producer of oil and gas. But climate change threatens Alberta's agriculture and water supply. How should Alberta balance these two realities? Give one argument on each side. Then state your own position.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S4</div>
+    <div class="q-body">
+      <div class="q-text"><strong>Space + Energy Resources:</strong> Solar satellites in orbit could collect solar energy 24 hours a day and beam it to Earth as microwaves. Evaluate this idea using at least three of the five selection factors for energy.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S5</div>
+    <div class="q-body">
+      <div class="q-text"><strong>All Units — Indigenous Knowledge:</strong> Traditional Ecological Knowledge (TEK) has contributed to our understanding of ice, ecosystems, climate, energy, and astronomy. Choose two units. For each, explain how TEK complements scientific knowledge.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S6</div>
+    <div class="q-body">
+      <div class="q-text"><strong>All Units — Big Picture:</strong> Choose the one idea from Grade 6 Science that you think is most important for people to understand. Explain your choice. Connect it to at least two units.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SELF-ASSESSMENT ==================== -->
+<div class="rubric">
+  <h2>Year-End Self-Assessment — How Did I Do?</h2>
+  <p style="font-size:10pt;color:#64748b;margin-bottom:12px;">Circle a number to show how confident you feel in each unit.</p>
+  <table>
+    <tr><th>Unit</th><th>Key Skill</th><th>Not yet — 1</th><th>Getting there — 2</th><th>Got it — 3</th></tr>
+    <tr><td style="color:#0e7490;font-weight:700;">Matter</td><td>Use particle model to explain states and phase changes</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td style="color:#6D28D9;font-weight:700;">Forces</td><td>Name forces, calculate net force, explain N3L</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td style="color:#059669;font-weight:700;">Living Systems</td><td>Build food webs and predict cascade effects</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td style="color:#0369a1;font-weight:700;">Climate</td><td>Describe greenhouse effect and read climate data</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td style="color:#b45309;font-weight:700;">Energy Resources</td><td>Compare energy sources using five factors</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td style="color:#4338ca;font-weight:700;">Space</td><td>Explain solar system objects, satellites, exploration</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+  </table>
+  <p style="margin-top:18px;font-size:10.5pt;"><strong>The unit I grew the most in this year:</strong></p>
+  <div class="resp-line"></div>
+  <p style="margin-top:10px;font-size:10.5pt;"><strong>One big idea I will remember from Grade 6 Science:</strong></p>
+  <div class="resp-line"></div>
+  <p style="margin-top:10px;font-size:10.5pt;"><strong>One question I still have about the world:</strong></p>
+  <div class="resp-line"></div>
+</div>
+
+</body>
+</html>

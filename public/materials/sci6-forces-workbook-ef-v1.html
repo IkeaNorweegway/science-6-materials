@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forces — Easy Read Workbook | Grade 6 Science</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11pt; line-height: 1.6; color: #1e293b; background: #f8fafc; max-width: 860px; margin: 0 auto; padding: 24px 28px 60px; }
+  :root { --c: #6D28D9; --cl: #ede9fe; --cm: #7c3aed; }
+  .cover { background: var(--c); color: #fff; border-radius: 10px; padding: 28px 32px 24px; margin-bottom: 28px; }
+  .cover h1 { font-size: 22pt; font-weight: 800; margin-bottom: 6px; }
+  .cover .sub { font-size: 12pt; opacity: .85; margin-bottom: 14px; }
+  .cover .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .cover .cbadge { background: rgba(255,255,255,.18); border-radius: 20px; padding: 4px 14px; font-size: 9pt; font-weight: 700; }
+  .er-tag { background: #fff; color: var(--c); border-radius: 20px; padding: 4px 14px; font-size: 9pt; font-weight: 800; }
+  .name-block { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  .name-field { border-bottom: 2px solid #cbd5e1; padding-bottom: 6px; }
+  .name-field label { font-size: 8.5pt; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 20px; }
+  .section-head { background: var(--c); color: #fff; padding: 10px 18px; border-radius: 8px 8px 0 0; font-size: 11.5pt; font-weight: 700; margin-top: 32px; display: flex; justify-content: space-between; align-items: center; }
+  .section-head span { font-size: 9pt; opacity: .8; font-weight: 400; }
+  .question { background: #fff; border: 1px solid #e2e8f0; border-top: none; padding: 16px 20px 18px; margin-bottom: 2px; }
+  .question:last-of-type { border-radius: 0 0 8px 8px; margin-bottom: 0; }
+  .q-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+  .q-num { background: var(--c); color: #fff; width: 28px; height: 28px; border-radius: 50%; font-weight: 800; font-size: 10pt; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .q-body { flex: 1; }
+  .q-text { font-size: 11pt; line-height: 1.6; margin-bottom: 8px; }
+  .badge-core { background: var(--cl); color: var(--c); font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; }
+  .badge-ext { background: #fef9c3; color: #854d0e; font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; }
+  .word-bank { background: #f5f3ff; border: 1.5px solid #c4b5fd; border-radius: 6px; padding: 8px 14px; margin: 8px 0 10px; font-size: 10pt; }
+  .word-bank strong { color: var(--c); font-size: 8.5pt; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 4px; }
+  .word-bank .words { color: #4c1d95; font-weight: 600; }
+  .hint { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 6px 6px 0; padding: 8px 14px; margin: 8px 0 10px; font-size: 10pt; color: #166534; }
+  .hint strong { font-weight: 700; }
+  .resp-line { border-bottom: 1.5px solid #cbd5e1; margin: 8px 0 6px; height: 28px; }
+  .draw-area { border: 2px dashed #cbd5e1; border-radius: 6px; min-height: 110px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 10pt; font-style: italic; text-align: center; padding: 12px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 10.5pt; }
+  th { background: var(--cl); color: var(--c); font-weight: 700; padding: 8px 12px; border: 1px solid #c4b5fd; text-align: left; }
+  td { padding: 8px 12px; border: 1px solid #e2e8f0; vertical-align: top; }
+  tr:nth-child(even) td { background: #faf5ff; }
+  .ans-cell { border-bottom: 2px solid var(--c) !important; background: #fff !important; }
+  .meta-block { background: #faf5ff; border: 1.5px solid #e9d5ff; border-radius: 8px; padding: 14px 18px; margin: 24px 0 8px; }
+  .meta-block h3 { color: #7c3aed; font-size: 9.5pt; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .06em; }
+  .meta-q { font-size: 11pt; margin-bottom: 8px; }
+  .stretch-header { background: #1e293b; color: #fff; padding: 10px 18px; border-radius: 8px 8px 0 0; font-size: 11.5pt; font-weight: 700; margin-top: 36px; }
+  .stretch-q { background: #fff; border: 1px solid #334155; border-top: none; padding: 16px 20px 18px; margin-bottom: 2px; }
+  .stretch-q:last-of-type { border-radius: 0 0 8px 8px; }
+  .rubric { margin-top: 36px; }
+  .rubric h2 { font-size: 13pt; font-weight: 700; color: #1e293b; margin-bottom: 12px; border-bottom: 2px solid var(--cl); padding-bottom: 6px; }
+  .blank { display: inline-block; border-bottom: 2px solid var(--c); min-width: 90px; height: 22px; vertical-align: bottom; margin: 0 3px; }
+  svg text { font-family: 'Segoe UI', system-ui, sans-serif; }
+  .diagram-label { font-size: 9.5pt; color: #64748b; margin-top: 4px; text-align: center; font-style: italic; }
+  @media print { body { background: #fff; padding: 10px 16px; } .question, .stretch-q { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Forces — Easy Read Workbook</h1>
+  <p class="sub">Grade 6 Science · Forces · Internal Forces · Newton's Third Law</p>
+  <div class="badges">
+    <span class="er-tag">Easy Read</span>
+    <span class="cbadge">25 Questions</span>
+    <span class="cbadge">4 Stretch Questions</span>
+    <span class="cbadge">Self-Check at the End</span>
+  </div>
+</div>
+
+<div class="name-block">
+  <div class="name-field"><label>Name</label></div>
+  <div class="name-field"><label>Date</label></div>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<div class="section-head">Section 1 — What Is a Force? <span>Questions 1–8</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">1</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Fill in the blanks to complete the definition of a force.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;push · pull · direction · magnitude · newton (N)</span></div>
+      <div class="hint"><strong>Hint:</strong> A force always has two things: a size and a direction.</div>
+      <p>A force is a <span class="blank"></span> or a <span class="blank"></span>.</p>
+      <p>Forces have two parts:</p>
+      <p>1. <strong>Magnitude</strong> — the size of the force. It is measured in <span class="blank"></span>.</p>
+      <p>2. <strong>Direction</strong> — the <span class="blank"></span> the force acts.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">2</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> There are five external forces. Fill in the name of each force in the table.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;applied force · friction · elastic force · gravity · normal force</span></div>
+      <div class="hint"><strong>Hint:</strong> External forces act on an object from outside.</div>
+      <table>
+        <tr><th>Description</th><th>Force Name</th></tr>
+        <tr><td>A push or pull from a person or object</td><td class="ans-cell"></td></tr>
+        <tr><td>A force that slows motion between two surfaces</td><td class="ans-cell"></td></tr>
+        <tr><td>A force made when a material is stretched or squished</td><td class="ans-cell"></td></tr>
+        <tr><td>A force that pulls objects toward Earth</td><td class="ans-cell"></td></tr>
+        <tr><td>A force that pushes up from a surface</td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">3</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> The diagram shows two people pulling a rope from opposite ends. Look at the diagram. What type of internal force is in the rope?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;tension · compression · shear · torsion</span></div>
+      <div class="hint"><strong>Hint:</strong> The rope is being pulled apart from both ends.</div>
+      <!-- SVG: rope tension -->
+      <div style="margin:14px auto;text-align:center;">
+        <svg width="420" height="80" viewBox="0 0 420 80">
+          <!-- Person left -->
+          <circle cx="30" cy="30" r="12" fill="#6D28D9"/>
+          <line x1="30" y1="42" x2="30" y2="68" stroke="#6D28D9" stroke-width="2"/>
+          <line x1="30" y1="50" x2="15" y2="60" stroke="#6D28D9" stroke-width="2"/>
+          <line x1="30" y1="50" x2="45" y2="55" stroke="#6D28D9" stroke-width="2"/>
+          <line x1="30" y1="68" x2="20" y2="80" stroke="#6D28D9" stroke-width="2"/>
+          <line x1="30" y1="68" x2="40" y2="80" stroke="#6D28D9" stroke-width="2"/>
+          <!-- Arrow left -->
+          <line x1="45" y1="40" x2="90" y2="40" stroke="#6D28D9" stroke-width="3"/>
+          <polygon points="85,34 100,40 85,46" fill="#6D28D9"/>
+          <!-- Rope -->
+          <rect x="100" y="34" width="220" height="12" rx="6" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="210" y="45" text-anchor="middle" font-size="10" fill="#475569">ROPE</text>
+          <!-- Arrow right -->
+          <line x1="320" y1="40" x2="375" y2="40" stroke="#6D28D9" stroke-width="3"/>
+          <polygon points="335,34 320,40 335,46" fill="#6D28D9"/>
+          <!-- Person right -->
+          <circle cx="390" cy="30" r="12" fill="#6D28D9"/>
+          <line x1="390" y1="42" x2="390" y2="68" stroke="#6D28D9" stroke-width="2"/>
+          <line x1="390" y1="50" x2="375" y2="55" stroke="#6D28D9" stroke-width="2"/>
+          <line x1="390" y1="50" x2="405" y2="60" stroke="#6D28D9" stroke-width="2"/>
+          <line x1="390" y1="68" x2="380" y2="80" stroke="#6D28D9" stroke-width="2"/>
+          <line x1="390" y1="68" x2="400" y2="80" stroke="#6D28D9" stroke-width="2"/>
+        </svg>
+      </div>
+      <p>The force inside the rope is called: <span class="blank" style="min-width:100px"></span></p>
+      <p>The rope is being pulled <span class="blank" style="min-width:80px"></span> from both ends.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">4</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Match each internal force to its description. Write the letter in the box.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;tension · compression · shear · torsion</span></div>
+      <div class="hint"><strong>Hint:</strong> Think about what happens to the particles inside the material in each case.</div>
+      <table>
+        <tr><th style="width:40%">Internal Force</th><th>Description</th></tr>
+        <tr><td>A. Tension</td><td>Particles are twisted around each other</td></tr>
+        <tr><td>B. Compression</td><td>Particles are pulled apart — a stretching force</td></tr>
+        <tr><td>C. Shear</td><td>Particles are pushed together — a squishing force</td></tr>
+        <tr><td>D. Torsion</td><td>Layers slide in opposite directions</td></tr>
+      </table>
+      <p style="margin-top:10px;">Correct order (match A–D to descriptions above):</p>
+      <p>Tension = Description <span class="blank" style="min-width:40px"></span> &nbsp; Compression = Description <span class="blank" style="min-width:40px"></span></p>
+      <p>Shear = Description <span class="blank" style="min-width:40px"></span> &nbsp; Torsion = Description <span class="blank" style="min-width:40px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">5</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Newton's Third Law says: "For every action, there is an equal and opposite reaction." Fill in the three key properties of an action-reaction pair.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;equal in size · opposite in direction · different objects</span></div>
+      <div class="hint"><strong>Hint:</strong> Action-reaction forces always come in pairs. They never act on the same object.</div>
+      <p>Action-reaction pairs are:</p>
+      <p>1. <span class="blank" style="min-width:160px"></span> (the same magnitude)</p>
+      <p>2. <span class="blank" style="min-width:160px"></span> (they point opposite ways)</p>
+      <p>3. They act on <span class="blank" style="min-width:160px"></span> (never the same object)</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">6</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> The diagram shows a box on a surface. Four arrows show the forces. Label each arrow with the correct force name.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;applied force · friction · gravity · normal force</span></div>
+      <div class="hint"><strong>Hint:</strong> Gravity pulls down. Normal force pushes up. Friction pushes back. Applied force pushes forward.</div>
+      <!-- SVG: 4-force diagram -->
+      <div style="margin:16px auto;text-align:center;">
+        <svg width="360" height="220" viewBox="0 0 360 220">
+          <!-- Surface -->
+          <rect x="60" y="155" width="240" height="8" rx="2" fill="#94a3b8"/>
+          <line x1="60" y1="163" x2="300" y2="163" stroke="#94a3b8" stroke-width="1"/>
+          <!-- Box -->
+          <rect x="140" y="95" width="80" height="60" rx="4" fill="#ede9fe" stroke="#6D28D9" stroke-width="2"/>
+          <text x="180" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#4c1d95">BOX</text>
+          <!-- Up arrow (normal) -->
+          <line x1="180" y1="95" x2="180" y2="45" stroke="#6D28D9" stroke-width="3"/>
+          <polygon points="173,55 180,40 187,55" fill="#6D28D9"/>
+          <rect x="120" y="20" width="120" height="22" rx="4" fill="#f5f3ff" stroke="#c4b5fd"/>
+          <text x="180" y="35" text-anchor="middle" font-size="10" fill="#4c1d95">A: <tspan font-weight="bold">_______________</tspan></text>
+          <!-- Down arrow (gravity) -->
+          <line x1="180" y1="155" x2="180" y2="205" stroke="#6D28D9" stroke-width="3"/>
+          <polygon points="173,195 180,210 187,195" fill="#6D28D9"/>
+          <rect x="100" y="198" width="160" height="22" rx="4" fill="#f5f3ff" stroke="#c4b5fd"/>
+          <text x="180" y="213" text-anchor="middle" font-size="10" fill="#4c1d95">B: <tspan font-weight="bold">_______________</tspan></text>
+          <!-- Right arrow (applied) -->
+          <line x1="220" y1="125" x2="290" y2="125" stroke="#6D28D9" stroke-width="3"/>
+          <polygon points="280,118 295,125 280,132" fill="#6D28D9"/>
+          <rect x="280" y="112" width="75" height="22" rx="4" fill="#f5f3ff" stroke="#c4b5fd"/>
+          <text x="317" y="127" text-anchor="middle" font-size="10" fill="#4c1d95">C: <tspan font-weight="bold">_____</tspan></text>
+          <!-- Left arrow (friction) -->
+          <line x1="140" y1="125" x2="70" y2="125" stroke="#6D28D9" stroke-width="3"/>
+          <polygon points="80,118 65,125 80,132" fill="#6D28D9"/>
+          <rect x="0" y="112" width="75" height="22" rx="4" fill="#f5f3ff" stroke="#c4b5fd"/>
+          <text x="37" y="127" text-anchor="middle" font-size="10" fill="#4c1d95">D: <tspan font-weight="bold">_____</tspan></text>
+        </svg>
+      </div>
+      <p>A = <span class="blank" style="min-width:130px"></span> &nbsp; B = <span class="blank" style="min-width:100px"></span></p>
+      <p>C = <span class="blank" style="min-width:130px"></span> &nbsp; D = <span class="blank" style="min-width:100px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">7</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student says: "Friction always stops things from moving." Is this correct? Explain.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;not correct · slows · opposes · direction of motion · still acts</span></div>
+      <div class="hint"><strong>Hint:</strong> Friction acts opposite to the direction of motion. It slows things but does not always stop them.</div>
+      <p>The student is <span class="blank" style="min-width:100px"></span>.</p>
+      <p>Because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">8</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name one situation where friction is helpful and one where it is unhelpful.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;walking · sliding on ice · braking · engine wear · tires gripping the road</span></div>
+      <div class="hint"><strong>Hint:</strong> We need friction to grip things. But friction can also waste energy.</div>
+      <p>Helpful: <span class="blank" style="min-width:200px"></span></p>
+      <p>Unhelpful: <span class="blank" style="min-width:200px"></span></p>
+    </div>
+  </div>
+</div>
+
+<!-- META 1 -->
+<div class="meta-block">
+  <h3>Check-In 1 of 3</h3>
+  <p class="meta-q">Look back at Questions 1–8. Which question felt most confusing? Write the number: <span class="blank" style="min-width:50px"></span></p>
+  <p class="meta-q">Write one question you have about forces so far:</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<div class="section-head">Section 2 — Elastic Limit and Net Force <span>Questions 9–17</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">9</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> You bend a paper clip a little and let go. It springs back. You bend it a lot and let go. It stays bent. What do these two results show?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;elastic deformation · plastic deformation · elastic limit · below · above</span></div>
+      <div class="hint"><strong>Hint:</strong> Elastic means it returns to its original shape. Plastic means it stays in its new shape.</div>
+      <table>
+        <tr><th>Bend</th><th>Result</th><th>Type of Deformation</th><th>Force was … the elastic limit</th></tr>
+        <tr><td>Small bend → springs back</td><td>Returns to shape</td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td>Large bend → stays bent</td><td>Keeps new shape</td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">10</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> The diagram shows a spring at rest, then stretched, then squished. Label each state.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;at rest · stretched (tension) · compressed (compression)</span></div>
+      <div class="hint"><strong>Hint:</strong> At rest = no force. Stretched = pulled. Compressed = squished.</div>
+      <div style="margin:14px auto;text-align:center;">
+        <svg width="420" height="100" viewBox="0 0 420 100">
+          <!-- Spring at rest -->
+          <g transform="translate(20,20)">
+            <line x1="0" y1="30" x2="15" y2="30" stroke="#6D28D9" stroke-width="2"/>
+            <path d="M15,30 Q20,15 25,30 Q30,45 35,30 Q40,15 45,30 Q50,45 55,30 Q60,15 65,30 Q70,45 75,30 Q80,15 85,30" fill="none" stroke="#6D28D9" stroke-width="2"/>
+            <line x1="85" y1="30" x2="100" y2="30" stroke="#6D28D9" stroke-width="2"/>
+            <circle cx="100" cy="30" r="10" fill="#c4b5fd"/>
+            <text x="50" y="68" text-anchor="middle" font-size="9" fill="#64748b">State 1: ___________</text>
+          </g>
+          <!-- Spring stretched -->
+          <g transform="translate(150,20)">
+            <line x1="0" y1="30" x2="10" y2="30" stroke="#6D28D9" stroke-width="2"/>
+            <path d="M10,30 Q15,10 22,30 Q29,50 36,30 Q43,10 50,30 Q57,50 64,30 Q71,10 78,30 Q85,50 92,30 Q99,10 106,30 Q113,50 120,30" fill="none" stroke="#6D28D9" stroke-width="2"/>
+            <line x1="120" y1="30" x2="130" y2="30" stroke="#6D28D9" stroke-width="2"/>
+            <circle cx="130" cy="30" r="10" fill="#c4b5fd"/>
+            <text x="65" y="68" text-anchor="middle" font-size="9" fill="#64748b">State 2: ___________</text>
+          </g>
+          <!-- Spring compressed -->
+          <g transform="translate(310,20)">
+            <line x1="0" y1="30" x2="10" y2="30" stroke="#6D28D9" stroke-width="2"/>
+            <path d="M10,30 Q13,18 16,30 Q19,42 22,30 Q25,18 28,30 Q31,42 34,30 Q37,18 40,30 Q43,42 46,30 Q49,18 52,30 Q55,42 58,30" fill="none" stroke="#6D28D9" stroke-width="2"/>
+            <line x1="58" y1="30" x2="68" y2="30" stroke="#6D28D9" stroke-width="2"/>
+            <circle cx="68" cy="30" r="10" fill="#c4b5fd"/>
+            <text x="39" y="68" text-anchor="middle" font-size="9" fill="#64748b">State 3: ___________</text>
+          </g>
+        </svg>
+      </div>
+      <p>State 1: <span class="blank" style="min-width:140px"></span></p>
+      <p>State 2: <span class="blank" style="min-width:140px"></span></p>
+      <p>State 3: <span class="blank" style="min-width:140px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">11</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> The diagram shows two forces on a box. One force pushes right (15 N). One force pushes left (6 N). Calculate the net force. Show your work.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;subtract · 9 N · right · net force</span></div>
+      <div class="hint"><strong>Hint:</strong> Net force = bigger force − smaller force. The direction is the same as the bigger force.</div>
+      <div style="margin:14px auto;text-align:center;">
+        <svg width="360" height="80" viewBox="0 0 360 80">
+          <rect x="130" y="20" width="100" height="50" rx="6" fill="#ede9fe" stroke="#6D28D9" stroke-width="2"/>
+          <text x="180" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#4c1d95">BOX</text>
+          <!-- Right arrow -->
+          <line x1="230" y1="45" x2="310" y2="45" stroke="#6D28D9" stroke-width="3"/>
+          <polygon points="300,39 315,45 300,51" fill="#6D28D9"/>
+          <text x="260" y="34" text-anchor="middle" font-size="11" font-weight="bold" fill="#6D28D9">15 N</text>
+          <!-- Left arrow -->
+          <line x1="130" y1="45" x2="50" y2="45" stroke="#6D28D9" stroke-width="3"/>
+          <polygon points="60,39 45,45 60,51" fill="#6D28D9"/>
+          <text x="100" y="34" text-anchor="middle" font-size="11" font-weight="bold" fill="#6D28D9">6 N</text>
+        </svg>
+      </div>
+      <p>Net force = <span class="blank" style="min-width:50px"></span> N − <span class="blank" style="min-width:50px"></span> N = <span class="blank" style="min-width:50px"></span> N to the <span class="blank" style="min-width:60px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">12</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Two equal forces push on a box from opposite sides. The box does not move. What is the net force?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;0 N · balanced · unbalanced · equal forces cancel</span></div>
+      <div class="hint"><strong>Hint:</strong> Equal forces in opposite directions cancel each other out.</div>
+      <p>Net force = <span class="blank" style="min-width:80px"></span></p>
+      <p>The forces are <span class="blank" style="min-width:100px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">13</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A helmet foam deforms in a crash. After the crash, it stays squished. A rubber ball bounces back to its shape. Match each material to the type of deformation.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;plastic deformation · elastic deformation</span></div>
+      <div class="hint"><strong>Hint:</strong> Plastic = keeps new shape. Elastic = returns to original shape.</div>
+      <p>Helmet foam: <span class="blank" style="min-width:160px"></span></p>
+      <p>Rubber ball: <span class="blank" style="min-width:160px"></span></p>
+      <p>Which one is safer for a helmet? <span class="blank" style="min-width:160px"></span></p>
+      <p>Because:</p>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">14</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A bridge cable must go back to its original length after a truck drives over it. What type of deformation must the cable have?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;elastic deformation · plastic deformation · below the elastic limit · above the elastic limit</span></div>
+      <div class="hint"><strong>Hint:</strong> If the cable did not return to its original length, the bridge would sag.</div>
+      <p>The cable must have <span class="blank" style="min-width:160px"></span>.</p>
+      <p>The force must stay <span class="blank" style="min-width:160px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">15</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Which of the following are valid action-reaction pairs? Circle YES or NO for each.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Yes · No · same object · different objects · equal · opposite</span></div>
+      <div class="hint"><strong>Hint:</strong> A valid pair must have: equal size, opposite direction, acting on different objects.</div>
+      <table>
+        <tr><th>Pair</th><th>Valid? (Yes / No)</th></tr>
+        <tr><td>You push a wall → wall pushes you back</td><td class="ans-cell"></td></tr>
+        <tr><td>Gravity pulls you down → normal force pushes you up (both on you)</td><td class="ans-cell"></td></tr>
+        <tr><td>You push on a skateboard → skateboard pushes on you</td><td class="ans-cell"></td></tr>
+        <tr><td>You kick a ball → ball kicks back at your foot</td><td class="ans-cell"></td></tr>
+      </table>
+      <p style="margin-top:8px;">Why is Pair 2 NOT a valid action-reaction pair?</p>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">16</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Three diagrams show different internal forces. Label each one.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;tension · compression · shear · torsion</span></div>
+      <div style="margin:14px auto;text-align:center;">
+        <svg width="420" height="120" viewBox="0 0 420 120">
+          <!-- Tension diagram -->
+          <g transform="translate(20,30)">
+            <rect x="20" y="20" width="70" height="24" rx="4" fill="#ede9fe" stroke="#6D28D9" stroke-width="2"/>
+            <line x1="0" y1="32" x2="20" y2="32" stroke="#6D28D9" stroke-width="2.5"/>
+            <polygon points="5,27 0,32 5,37" fill="#6D28D9"/>
+            <line x1="90" y1="32" x2="110" y2="32" stroke="#6D28D9" stroke-width="2.5"/>
+            <polygon points="105,27 110,32 105,37" fill="#6D28D9"/>
+            <text x="55" y="68" text-anchor="middle" font-size="9" fill="#64748b">A: ____________</text>
+          </g>
+          <!-- Compression diagram -->
+          <g transform="translate(155,30)">
+            <rect x="20" y="20" width="70" height="24" rx="4" fill="#ede9fe" stroke="#6D28D9" stroke-width="2"/>
+            <line x1="0" y1="32" x2="20" y2="32" stroke="#6D28D9" stroke-width="2.5"/>
+            <polygon points="15,27 20,32 15,37" fill="#6D28D9"/>
+            <line x1="90" y1="32" x2="110" y2="32" stroke="#6D28D9" stroke-width="2.5"/>
+            <polygon points="95,27 90,32 95,37" fill="#6D28D9"/>
+            <text x="55" y="68" text-anchor="middle" font-size="9" fill="#64748b">B: ____________</text>
+          </g>
+          <!-- Shear diagram -->
+          <g transform="translate(290,20)">
+            <rect x="10" y="10" width="80" height="20" rx="3" fill="#c4b5fd" stroke="#6D28D9" stroke-width="1.5"/>
+            <rect x="10" y="40" width="80" height="20" rx="3" fill="#ede9fe" stroke="#6D28D9" stroke-width="1.5"/>
+            <line x1="90" y1="20" x2="115" y2="20" stroke="#6D28D9" stroke-width="2.5"/>
+            <polygon points="110,15 115,20 110,25" fill="#6D28D9"/>
+            <line x1="10" y1="50" x2="-15" y2="50" stroke="#6D28D9" stroke-width="2.5"/>
+            <polygon points="-10,45 -15,50 -10,55" fill="#6D28D9"/>
+            <text x="50" y="80" text-anchor="middle" font-size="9" fill="#64748b">C: ____________</text>
+          </g>
+        </svg>
+      </div>
+      <p>A = <span class="blank" style="min-width:100px"></span> &nbsp; B = <span class="blank" style="min-width:100px"></span> &nbsp; C = <span class="blank" style="min-width:80px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">17</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> You twist a wet towel to squeeze out water. What type of internal force acts inside the towel?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;torsion · tension · shear · compression</span></div>
+      <div class="hint"><strong>Hint:</strong> Twisting creates a specific type of internal force.</div>
+      <p>The force is called: <span class="blank" style="min-width:100px"></span></p>
+    </div>
+  </div>
+</div>
+
+<!-- META 2 -->
+<div class="meta-block">
+  <h3>Check-In 2 of 3</h3>
+  <p class="meta-q">Look back at Questions 9–17. Pick one concept you understand well. Write it here:</p>
+  <div class="resp-line"></div>
+  <p class="meta-q" style="margin-top:8px;">Pick one concept you are still unsure about:</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<div class="section-head">Section 3 — Newton's Third Law and Applications <span>Questions 18–25</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">18</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> You jump up from the floor. Fill in the blanks to describe the action-reaction pair.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;down · up · you · floor · equal and opposite</span></div>
+      <div class="hint"><strong>Hint:</strong> You push the floor. What does the floor do to you?</div>
+      <p>Action: You push <span class="blank" style="min-width:60px"></span> on the <span class="blank" style="min-width:60px"></span>.</p>
+      <p>Reaction: The floor pushes <span class="blank" style="min-width:60px"></span> on <span class="blank" style="min-width:60px"></span>.</p>
+      <p>These forces are <span class="blank" style="min-width:150px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">19</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student says: "A small car and a large truck collide. The truck pushes the car with a bigger force. The car pushes the truck with a smaller force." Is this correct? Explain.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;not correct · equal forces · Newton's Third Law · same size · different masses</span></div>
+      <div class="hint"><strong>Hint:</strong> Newton's Third Law says action and reaction forces are always equal in size.</div>
+      <p>The student is <span class="blank" style="min-width:100px"></span>.</p>
+      <p>Because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">20</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A rower pushes the paddle backward through the water. What happens to the boat?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;forward · backward · reaction force · water pushes paddle · Newton's Third Law</span></div>
+      <div class="hint"><strong>Hint:</strong> Paddle pushes water backward → water pushes paddle forward.</div>
+      <p>The boat moves <span class="blank" style="min-width:80px"></span>.</p>
+      <p>Explain using Newton's Third Law:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">21</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student says: "Action and reaction forces cancel out. So nothing ever moves." What is wrong with this thinking?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;different objects · same object · cannot cancel · balanced forces · Newton's Third Law</span></div>
+      <div class="hint"><strong>Hint:</strong> Forces only cancel when they act on the SAME object. Action-reaction pairs act on different objects.</div>
+      <p>The error is:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">22</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> You lean against a wall. You do not fall through the wall. Describe the action-reaction pair.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;you push into the wall · wall pushes back on you · equal and opposite</span></div>
+      <div class="hint"><strong>Hint:</strong> If the wall did not push back, you would fall through it.</div>
+      <p>Action: <span class="blank" style="min-width:220px"></span></p>
+      <p>Reaction: <span class="blank" style="min-width:220px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">23</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> A rocket fires hot gases downward. The rocket moves upward. Which law explains this? Name the action force and the reaction force.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Newton's Third Law · gases push down · rocket is pushed up · action · reaction</span></div>
+      <p>Law: <span class="blank" style="min-width:180px"></span></p>
+      <p>Action force: <span class="blank" style="min-width:200px"></span></p>
+      <p>Reaction force: <span class="blank" style="min-width:200px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">24</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> An engineer is designing a building. She needs to choose where to put steel beams. Name one part of a building that has tension and one part that has compression.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;tension · compression · cables · columns · floor · arch · suspension bridge</span></div>
+      <p>Tension is found in: <span class="blank" style="min-width:180px"></span></p>
+      <p>Compression is found in: <span class="blank" style="min-width:180px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">25</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> A rock climber hangs from a rope on a cliff. Use your knowledge of forces to answer all parts.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;gravity · tension · normal force · Newton's Third Law · net force · balanced · weight</span></div>
+      <p><strong>Part A —</strong> Name the force pulling the climber down:</p>
+      <div class="resp-line"></div>
+      <p><strong>Part B —</strong> Name the force in the rope holding the climber up:</p>
+      <div class="resp-line"></div>
+      <p><strong>Part C —</strong> If the climber hangs still, what is the net force?</p>
+      <div class="resp-line"></div>
+      <p><strong>Part D —</strong> The climber grips the rock. Describe the action-reaction pair between the climber's hand and the rock:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- META 3 -->
+<div class="meta-block">
+  <h3>Check-In 3 of 3</h3>
+  <p class="meta-q">You just finished all 25 questions. Write Newton's Third Law in your own words in one sentence:</p>
+  <div class="resp-line"></div>
+  <p class="meta-q" style="margin-top:8px;">Name one real-life example of Newton's Third Law that you thought of yourself:</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== STRETCH ZONE ==================== -->
+<div class="stretch-header">Stretch Zone — Challenge Questions</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S1</div>
+    <div class="q-body">
+      <div class="q-text">A skateboarder pushes off a wall. She speeds up and moves away. Use Newton's Third Law to explain the full sequence of forces that causes her to move.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S2</div>
+    <div class="q-body">
+      <div class="q-text">A suspension bridge uses cables to hold up the road deck. The cables are under tension. The towers are under compression. Explain why each force type is correct for each part. Use particle-level thinking.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S3</div>
+    <div class="q-body">
+      <div class="q-text">Design a material test to find the elastic limit of a rubber band. Name: what you measure, what you change, what you record, and how you know you have passed the elastic limit.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S4</div>
+    <div class="q-body">
+      <div class="q-text">In many Indigenous cultures, technology like snowshoes and birchbark canoes was designed to manage forces carefully. Choose one example. Explain which forces the technology had to handle and what properties the material needed.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SELF-ASSESSMENT ==================== -->
+<div class="rubric">
+  <h2>Self-Assessment — How Did I Do?</h2>
+  <p style="font-size:10pt;color:#64748b;margin-bottom:12px;">Circle a number to show how confident you feel about each skill.</p>
+  <table>
+    <tr><th>I can…</th><th>Not yet — 1</th><th>Getting there — 2</th><th>Got it — 3</th></tr>
+    <tr><td>Define force and name its two properties (magnitude and direction)</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Name and describe all five external forces</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Name and describe the four internal forces (tension, compression, shear, torsion)</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Explain the difference between elastic and plastic deformation</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Calculate net force when two forces act in opposite directions</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>State Newton's Third Law and give a real example</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Explain why action-reaction forces do not cancel each other</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+  </table>
+  <p style="margin-top:14px;font-size:10.5pt;"><strong>One thing I am proud of from this workbook:</strong></p>
+  <div class="resp-line"></div>
+  <p style="margin-top:10px;font-size:10.5pt;"><strong>One thing I will ask my teacher about:</strong></p>
+  <div class="resp-line"></div>
+</div>
+
+</body>
+</html>

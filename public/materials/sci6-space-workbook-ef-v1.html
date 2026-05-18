@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space — Easy Read Workbook | Grade 6 Science</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11pt; line-height: 1.6; color: #1e293b; background: #f8fafc; max-width: 860px; margin: 0 auto; padding: 24px 28px 60px; }
+  :root { --c: #4338ca; --cl: #e0e7ff; --cm: #6366f1; }
+  .cover { background: var(--c); color: #fff; border-radius: 10px; padding: 28px 32px 24px; margin-bottom: 28px; }
+  .cover h1 { font-size: 22pt; font-weight: 800; margin-bottom: 6px; }
+  .cover .sub { font-size: 12pt; opacity: .85; margin-bottom: 14px; }
+  .cover .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .cover .cbadge { background: rgba(255,255,255,.18); border-radius: 20px; padding: 4px 14px; font-size: 9pt; font-weight: 700; }
+  .er-tag { background: #fff; color: var(--c); border-radius: 20px; padding: 4px 14px; font-size: 9pt; font-weight: 800; }
+  .name-block { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  .name-field { border-bottom: 2px solid #cbd5e1; padding-bottom: 6px; }
+  .name-field label { font-size: 8.5pt; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 20px; }
+  .section-head { background: var(--c); color: #fff; padding: 10px 18px; border-radius: 8px 8px 0 0; font-size: 11.5pt; font-weight: 700; margin-top: 32px; display: flex; justify-content: space-between; align-items: center; }
+  .section-head span { font-size: 9pt; opacity: .8; font-weight: 400; }
+  .question { background: #fff; border: 1px solid #e2e8f0; border-top: none; padding: 16px 20px 18px; margin-bottom: 2px; }
+  .question:last-of-type { border-radius: 0 0 8px 8px; margin-bottom: 0; }
+  .q-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+  .q-num { background: var(--c); color: #fff; width: 28px; height: 28px; border-radius: 50%; font-weight: 800; font-size: 10pt; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .q-body { flex: 1; }
+  .q-text { font-size: 11pt; line-height: 1.6; margin-bottom: 8px; }
+  .badge-core { background: var(--cl); color: #312e81; font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; }
+  .badge-ext { background: #fef9c3; color: #854d0e; font-size: 8pt; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-right: 6px; white-space: nowrap; }
+  .word-bank { background: #eef2ff; border: 1.5px solid #a5b4fc; border-radius: 6px; padding: 8px 14px; margin: 8px 0 10px; font-size: 10pt; }
+  .word-bank strong { color: #312e81; font-size: 8.5pt; text-transform: uppercase; letter-spacing: .06em; display: block; margin-bottom: 4px; }
+  .word-bank .words { color: #312e81; font-weight: 600; }
+  .hint { background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 0 6px 6px 0; padding: 8px 14px; margin: 8px 0 10px; font-size: 10pt; color: #166534; }
+  .hint strong { font-weight: 700; }
+  .resp-line { border-bottom: 1.5px solid #cbd5e1; margin: 8px 0 6px; height: 28px; }
+  .draw-area { border: 2px dashed #cbd5e1; border-radius: 6px; min-height: 110px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 10pt; font-style: italic; text-align: center; padding: 12px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 10.5pt; }
+  th { background: var(--cl); color: #312e81; font-weight: 700; padding: 8px 12px; border: 1px solid #a5b4fc; text-align: left; }
+  td { padding: 8px 12px; border: 1px solid #e2e8f0; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8fafc; }
+  .ans-cell { border-bottom: 2px solid var(--c) !important; background: #fff !important; }
+  .meta-block { background: #eef2ff; border: 1.5px solid #a5b4fc; border-radius: 8px; padding: 14px 18px; margin: 24px 0 8px; }
+  .meta-block h3 { color: #312e81; font-size: 9.5pt; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .06em; }
+  .meta-q { font-size: 11pt; margin-bottom: 8px; }
+  .stretch-header { background: #1e293b; color: #fff; padding: 10px 18px; border-radius: 8px 8px 0 0; font-size: 11.5pt; font-weight: 700; margin-top: 36px; }
+  .stretch-q { background: #fff; border: 1px solid #334155; border-top: none; padding: 16px 20px 18px; margin-bottom: 2px; }
+  .stretch-q:last-of-type { border-radius: 0 0 8px 8px; }
+  .rubric { margin-top: 36px; }
+  .rubric h2 { font-size: 13pt; font-weight: 700; color: #1e293b; margin-bottom: 12px; border-bottom: 2px solid var(--cl); padding-bottom: 6px; }
+  .blank { display: inline-block; border-bottom: 2px solid var(--c); min-width: 90px; height: 22px; vertical-align: bottom; margin: 0 3px; }
+  @media print { body { background: #fff; padding: 10px 16px; } .question, .stretch-q { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Space — Easy Read Workbook</h1>
+  <p class="sub">Grade 6 Science · Solar System · Satellites · Space Exploration</p>
+  <div class="badges">
+    <span class="er-tag">Easy Read</span>
+    <span class="cbadge">24 Questions</span>
+    <span class="cbadge">4 Stretch Questions</span>
+    <span class="cbadge">Self-Check at the End</span>
+  </div>
+</div>
+
+<div class="name-block">
+  <div class="name-field"><label>Name</label></div>
+  <div class="name-field"><label>Date</label></div>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<div class="section-head">Section 1 — The Solar System <span>Questions 1–8</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">1</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Fill in the names of the eight planets in order from the sun.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Mercury · Venus · Earth · Mars · Jupiter · Saturn · Uranus · Neptune</span></div>
+      <div class="hint"><strong>Hint:</strong> Try: My Very Eager Mother Just Served Us Nachos.</div>
+      <ol style="margin:10px 0;padding-left:22px;line-height:2.4;">
+        <li><span class="blank" style="min-width:120px"></span></li>
+        <li><span class="blank" style="min-width:120px"></span></li>
+        <li><span class="blank" style="min-width:120px"></span></li>
+        <li><span class="blank" style="min-width:120px"></span></li>
+        <li><span class="blank" style="min-width:120px"></span></li>
+        <li><span class="blank" style="min-width:120px"></span></li>
+        <li><span class="blank" style="min-width:120px"></span></li>
+        <li><span class="blank" style="min-width:120px"></span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">2</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name the eight objects in our solar system. For each, write whether it emits or reflects light.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;emits light · reflects light · star · planet · moon · asteroid · comet · dwarf planet</span></div>
+      <div class="hint"><strong>Hint:</strong> Only stars make their own light. All other objects reflect sunlight.</div>
+      <table>
+        <tr><th>Object</th><th>Emits or Reflects Light?</th><th>Example</th></tr>
+        <tr><td>Star</td><td class="ans-cell"></td><td>The Sun</td></tr>
+        <tr><td>Planet</td><td class="ans-cell"></td><td>Earth, Mars</td></tr>
+        <tr><td>Moon (natural satellite)</td><td class="ans-cell"></td><td>Earth's Moon</td></tr>
+        <tr><td>Asteroid</td><td class="ans-cell"></td><td>Ceres</td></tr>
+        <tr><td>Comet</td><td class="ans-cell"></td><td>Halley's Comet</td></tr>
+        <tr><td>Dwarf planet</td><td class="ans-cell"></td><td>Pluto</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">3</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Our solar system is very large. Scientists use special units to measure distances in space. Fill in the blanks.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;astronomical unit (AU) · light-year · Earth to the Sun · 9.46 trillion km · 150 million km · speed of light</span></div>
+      <div class="hint"><strong>Hint:</strong> 1 AU = the average distance from Earth to the Sun. A light-year is how far light travels in one year.</div>
+      <p>1 AU = the average distance from <span class="blank" style="min-width:180px"></span> = about <span class="blank" style="min-width:130px"></span>.</p>
+      <p>A light-year = the distance light travels in one year = about <span class="blank" style="min-width:140px"></span>.</p>
+      <p>We use these units because space is too big to measure in <span class="blank" style="min-width:100px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">4</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> What is the difference between a planet and a dwarf planet? Fill in the table.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;cleared its orbit · has not cleared its orbit · planet · dwarf planet · Pluto · Earth · Mars</span></div>
+      <div class="hint"><strong>Hint:</strong> In 2006, the International Astronomical Union created three criteria for a planet. Pluto met only two.</div>
+      <table>
+        <tr><th>Type</th><th>Has it cleared its orbit?</th><th>Example</th></tr>
+        <tr><td class="ans-cell"></td><td>Yes — no other objects share its orbit</td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td>No — shares its orbit with other objects</td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">5</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> In 2006, scientists reclassified Pluto as a dwarf planet. Some people were upset. Why was this the right scientific decision?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;evidence · new criteria · Kuiper Belt · similar objects · did not clear orbit · classification changed</span></div>
+      <div class="hint"><strong>Hint:</strong> Science updates when new evidence or better definitions are found. This is a strength of science.</div>
+      <p>It was the right decision because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">6</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> What is a satellite? Name two natural satellites and two artificial satellites.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;orbits · Earth's Moon · Phobos (Mars's moon) · ISS · Hubble Space Telescope · GPS satellite · natural · artificial</span></div>
+      <div class="hint"><strong>Hint:</strong> A satellite is anything that orbits another object. Moons are natural. Spacecraft sent by humans are artificial.</div>
+      <p>A satellite is any object that <span class="blank" style="min-width:140px"></span> another object.</p>
+      <p>Natural satellites: 1. <span class="blank" style="min-width:180px"></span> &nbsp; 2. <span class="blank" style="min-width:180px"></span></p>
+      <p>Artificial satellites: 1. <span class="blank" style="min-width:180px"></span> &nbsp; 2. <span class="blank" style="min-width:180px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">7</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name three things that artificial satellites do for us today.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;GPS navigation · weather forecasting · internet service · military surveillance · environmental monitoring · communication</span></div>
+      <div class="hint"><strong>Hint:</strong> Think about what your phone and TV use from space.</div>
+      <p>1. <span class="blank" style="min-width:280px"></span></p>
+      <p>2. <span class="blank" style="min-width:280px"></span></p>
+      <p>3. <span class="blank" style="min-width:280px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">8</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Why is the scale of the solar system hard for humans to imagine? Fill in the blanks using the scale model below.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;enormous · vast distances · light · billions · kilometres · difficult to visualize</span></div>
+      <div class="hint"><strong>Hint:</strong> If Earth were a marble (1 cm), the Sun would be about 1 m across and 107 m away.</div>
+      <div style="background:#eef2ff;border:1px solid #a5b4fc;border-radius:6px;padding:12px 16px;margin:10px 0;font-size:10pt;">
+        <strong>Scale model (Earth = 1 cm marble):</strong><br>
+        Sun = 1 metre ball, 107 m away<br>
+        Neptune = 107 m from Earth model → over 3 km away from Sun in this scale
+      </div>
+      <p>The solar system is <span class="blank" style="min-width:100px"></span>. It spans <span class="blank" style="min-width:100px"></span> of kilometres.</p>
+      <p>Even <span class="blank" style="min-width:60px"></span> takes 8 minutes to travel from the Sun to Earth.</p>
+    </div>
+  </div>
+</div>
+
+<!-- META 1 -->
+<div class="meta-block">
+  <h3>Check-In 1 of 3</h3>
+  <p class="meta-q">Look back at Questions 1–8. Which fact about space surprised you most? Write it here:</p>
+  <div class="resp-line"></div>
+  <p class="meta-q" style="margin-top:8px;">Write one question you still have about the solar system:</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<div class="section-head">Section 2 — Exploring Space <span>Questions 9–16</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">9</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Name four technologies that help us explore space. For each, write what it does.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;telescope · space probe · rover · space station · collect data · orbit · land · observe distant objects</span></div>
+      <div class="hint"><strong>Hint:</strong> Some tools stay on Earth. Some travel to other planets.</div>
+      <table>
+        <tr><th>Technology</th><th>What It Does</th></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">10</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> What challenges do astronauts face when traveling in space? Name three.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;microgravity · radiation · isolation · muscle loss · bone density loss · communication delays · limited food and water</span></div>
+      <div class="hint"><strong>Hint:</strong> Space is a very different environment from Earth.</div>
+      <p>Challenge 1: <span class="blank" style="min-width:280px"></span></p>
+      <p>Challenge 2: <span class="blank" style="min-width:280px"></span></p>
+      <p>Challenge 3: <span class="blank" style="min-width:280px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">11</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> The Ex-Alta 1 satellite was built by students at the University of Alberta. It studied space weather. Why is it meaningful that students built a real satellite?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;real contribution · students can do science · space exploration · data · launched · not just learning — doing</span></div>
+      <div class="hint"><strong>Hint:</strong> Ex-Alta 1 was part of a larger network of satellites studying the same event at the same time.</div>
+      <p>It is meaningful because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">12</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> How is a space probe different from a telescope? Fill in the table.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;stays on Earth · travels to other planets · observes from far away · collects data up close · telescope · space probe</span></div>
+      <table>
+        <tr><th>Tool</th><th>Where It Is</th><th>How It Collects Data</th></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">13</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student says: "Telescopes let us see stars. Stars emit light, so we just need to look." What is one challenge with observing distant stars that this student has not thought about?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;light years away · very faint · atmospheric distortion · light pollution · takes time to arrive · very old light</span></div>
+      <div class="hint"><strong>Hint:</strong> When we look at a star, we see light that left it thousands of years ago.</div>
+      <p>One challenge: <span class="blank" style="min-width:300px"></span></p>
+      <p>This matters because:</p>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">14</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Why do we send rovers to Mars instead of astronauts? Name two reasons.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;safer · cheaper · no life support needed · can stay longer · radiation · 7-month journey · no food or water needed</span></div>
+      <div class="hint"><strong>Hint:</strong> Rovers do not need to breathe, eat, or come home.</div>
+      <p>Reason 1: <span class="blank" style="min-width:280px"></span></p>
+      <p>Reason 2: <span class="blank" style="min-width:280px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">15</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Space exploration produces many technologies that we now use on Earth. Name two examples of "spinoff" technology from space programs.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;memory foam · scratch-resistant lenses · water filters · cordless tools · freeze-dried food · camera phones · GPS</span></div>
+      <div class="hint"><strong>Hint:</strong> NASA needed lightweight, tough, reliable technology. These ideas were later adapted for everyday use.</div>
+      <p>Spinoff 1: <span class="blank" style="min-width:200px"></span></p>
+      <p>Spinoff 2: <span class="blank" style="min-width:200px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">16</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> The James Webb Space Telescope looks at light from the very early universe. It was launched in 2021 and takes images of galaxies billions of light-years away. Why does looking far away in space also mean looking far back in time?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;light takes time · billions of years · old light · speed of light · looking into the past · very distant objects</span></div>
+      <p>Looking far away means looking back in time because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- META 2 -->
+<div class="meta-block">
+  <h3>Check-In 2 of 3</h3>
+  <p class="meta-q">Look back at Questions 9–16. Name one space technology you find most impressive:</p>
+  <div class="resp-line"></div>
+  <p class="meta-q" style="margin-top:8px;">Explain in one sentence why humans explore space:</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<div class="section-head">Section 3 — Applying and Evaluating <span>Questions 17–24</span></div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">17</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Many Indigenous peoples around the world have studied the night sky for thousands of years. They used this knowledge for navigation, agriculture, and ceremony. Name two ways that Indigenous sky knowledge connects to what scientists study today.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;star positions · seasons · navigation · astronomy · traditional ecological knowledge · constellations · patterns</span></div>
+      <div class="hint"><strong>Hint:</strong> Indigenous star knowledge can overlap with modern astronomy. Both track patterns in the sky.</div>
+      <p>Connection 1: <span class="blank" style="min-width:280px"></span></p>
+      <p>Connection 2: <span class="blank" style="min-width:280px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">18</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> A student says: "We see the Moon because it glows." Is this correct? Explain what we actually see.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;not correct · reflects sunlight · does not produce its own light · illuminated · sunlight hits · we see the lit side</span></div>
+      <div class="hint"><strong>Hint:</strong> Only stars produce their own light. The Moon is not a star.</div>
+      <p>The student is <span class="blank" style="min-width:100px"></span>.</p>
+      <p>What we actually see: <span class="blank" style="min-width:300px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">19</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> What causes the phases of the Moon? Fill in the blanks.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;Moon orbits Earth · sunlit side · faces us · different amounts · new moon · full moon · waxing · waning</span></div>
+      <div class="hint"><strong>Hint:</strong> The Moon does not change shape. We see different amounts of its lit side as it orbits.</div>
+      <p>The Moon phases are caused by the <span class="blank" style="min-width:130px"></span>.</p>
+      <p>As the Moon orbits, we see <span class="blank" style="min-width:150px"></span> of its <span class="blank" style="min-width:90px"></span>.</p>
+      <p>When we see none of the lit side: <span class="blank" style="min-width:100px"></span>.</p>
+      <p>When we see the full lit side: <span class="blank" style="min-width:100px"></span>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">20</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Compare the inner planets (Mercury, Venus, Earth, Mars) to the outer planets (Jupiter, Saturn, Uranus, Neptune). Fill in the table.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;rocky · gas giants · small · large · close to sun · far from sun · thin or no atmosphere · thick atmosphere</span></div>
+      <table>
+        <tr><th>Feature</th><th>Inner Planets</th><th>Outer Planets</th></tr>
+        <tr><td>Material</td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td>Size</td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td>Distance from Sun</td><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">21</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Scientists are searching for signs of life on Mars. What conditions would need to be present for life as we know it to exist?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;liquid water · energy source · carbon-based molecules · suitable temperature · protection from radiation · atmosphere</span></div>
+      <p>Conditions needed:</p>
+      <p>1. <span class="blank" style="min-width:260px"></span></p>
+      <p>2. <span class="blank" style="min-width:260px"></span></p>
+      <p>3. <span class="blank" style="min-width:260px"></span></p>
+      <p>Does Mars currently have these conditions? <span class="blank" style="min-width:80px"></span></p>
+      <p>Explain: <span class="blank" style="min-width:260px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">22</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-core">Core</span> Space exploration is very expensive. Some people say money should be spent on Earth's problems instead. Name one argument for and one argument against continuing to fund space exploration.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;spinoff technology · scientific discovery · resources · costly · money for health or poverty · inspiration · national security</span></div>
+      <p>Argument for: <span class="blank" style="min-width:280px"></span></p>
+      <p>Argument against: <span class="blank" style="min-width:280px"></span></p>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">23</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Computer models of the solar system let scientists predict where planets and asteroids will be in the future. How is this an example of computational thinking?</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;model · simulate · algorithm · data · predict · abstraction · orbital mechanics</span></div>
+      <div class="hint"><strong>Hint:</strong> Scientists use mathematical rules (gravity, velocity) to predict positions millions of years from now.</div>
+      <p>This is computational thinking because:</p>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="question">
+  <div class="q-header">
+    <div class="q-num">24</div>
+    <div class="q-body">
+      <div class="q-text"><span class="badge-ext">Extended</span> Imagine you are designing a mission to land on Europa (a moon of Jupiter). Europa has a liquid water ocean under ice. What three technologies would your mission need? Explain the purpose of each.</div>
+      <div class="word-bank"><strong>Word Bank</strong><span class="words"> &nbsp;spacecraft · ice drill · water sampler · communication system · power source · radiation shielding · cameras · sensors</span></div>
+      <table>
+        <tr><th>Technology</th><th>Purpose</th></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+        <tr><td class="ans-cell"></td><td class="ans-cell"></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- META 3 -->
+<div class="meta-block">
+  <h3>Check-In 3 of 3</h3>
+  <p class="meta-q">You just finished all 24 questions. Complete this sentence: "The most important thing I learned about space is…"</p>
+  <div class="resp-line"></div>
+  <p class="meta-q" style="margin-top:8px;">If you could travel to one object in our solar system, where would you go? Why?</p>
+  <div class="resp-line"></div>
+</div>
+
+<!-- ==================== STRETCH ZONE ==================== -->
+<div class="stretch-header">Stretch Zone — Challenge Questions</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S1</div>
+    <div class="q-body">
+      <div class="q-text">If you shrank the solar system so that the Sun was a basketball, how large and how far away would Earth be? Use the scale factor (Sun = 22 cm diameter, real Sun = 1.4 million km) to estimate. Show your thinking.</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S2</div>
+    <div class="q-body">
+      <div class="q-text">The Voyager 1 spacecraft was launched in 1977. It is now in interstellar space — beyond the solar system. It is about 23 billion km from Earth. Calculate how many AU this is (1 AU = 150 million km). What does this tell you about the scale of space beyond our solar system?</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S3</div>
+    <div class="q-body">
+      <div class="q-text">Scientists recently discovered an exoplanet (a planet outside our solar system) in the "habitable zone" of its star — meaning liquid water might exist there. The planet is 40 light-years away. Even at the speed of light, it would take 40 years to get a signal there. What challenges does this create for exploring or communicating with other star systems?</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<div class="stretch-q">
+  <div class="q-header">
+    <div class="q-num" style="background:#1e293b;">S4</div>
+    <div class="q-body">
+      <div class="q-text">Many First Nations groups in Canada have traditional knowledge of specific stars and constellations. This knowledge guided travel, predicted seasons, and marked ceremonies. How could collaboration between Indigenous knowledge holders and modern astronomers benefit both groups?</div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+      <div class="resp-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SELF-ASSESSMENT ==================== -->
+<div class="rubric">
+  <h2>Self-Assessment — How Did I Do?</h2>
+  <p style="font-size:10pt;color:#64748b;margin-bottom:12px;">Circle a number to show how confident you feel.</p>
+  <table>
+    <tr><th>I can…</th><th>Not yet — 1</th><th>Getting there — 2</th><th>Got it — 3</th></tr>
+    <tr><td>Name the eight planets in order from the sun</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Explain the difference between objects that emit and reflect light</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Explain what a satellite is and give natural and artificial examples</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Describe how at least two space exploration technologies work</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Explain why Pluto was reclassified as a dwarf planet</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+    <tr><td>Use AU and light-year to describe distances in space</td><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+  </table>
+  <p style="margin-top:14px;font-size:10.5pt;"><strong>One thing I am proud of from this workbook:</strong></p>
+  <div class="resp-line"></div>
+  <p style="margin-top:10px;font-size:10.5pt;"><strong>One thing I will ask my teacher about:</strong></p>
+  <div class="resp-line"></div>
+</div>
+
+</body>
+</html>

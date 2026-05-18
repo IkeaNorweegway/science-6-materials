@@ -314,6 +314,58 @@ const workbooks = [
     href: `${base}materials/sci6-space-workbook-v1.html`,
   },
 ];
+
+const workbooksEF = [
+  {
+    title: 'Matter — Easy Read Workbook',
+    description: 'Same 30 questions as the standard Matter workbook, rewritten at an easy-read level. Short sentences, word banks on every question, and hint boxes on all Core questions.',
+    unit: 'matter',
+    unitLabel: 'Matter',
+    href: `${base}materials/sci6-matter-workbook-ef-v1.html`,
+  },
+  {
+    title: 'Forces — Easy Read Workbook',
+    description: 'Same 25 questions as the standard Forces workbook, rewritten at an easy-read level. SVG force diagrams preserved. Word banks and hint boxes throughout.',
+    unit: 'forces',
+    unitLabel: 'Forces',
+    href: `${base}materials/sci6-forces-workbook-ef-v1.html`,
+  },
+  {
+    title: 'Living Systems — Easy Read Workbook',
+    description: 'Same 30 questions as the standard Living Systems workbook, rewritten at an easy-read level. Word banks on every question, hint boxes on all Core questions.',
+    unit: 'living-systems',
+    unitLabel: 'Living Systems',
+    href: `${base}materials/sci6-living-systems-workbook-ef-v1.html`,
+  },
+  {
+    title: 'Climate — Easy Read Workbook',
+    description: 'Same 30 questions as the standard Climate workbook, rewritten at an easy-read level. Word banks on every question, hint boxes on all Core questions.',
+    unit: 'climate',
+    unitLabel: 'Climate',
+    href: `${base}materials/sci6-climate-workbook-ef-v1.html`,
+  },
+  {
+    title: 'Energy Resources — Easy Read Workbook',
+    description: 'Same 24 questions as the standard Energy Resources workbook, rewritten at an easy-read level. Word banks on every question, hint boxes on all Core questions.',
+    unit: 'energy-resources',
+    unitLabel: 'Energy Resources',
+    href: `${base}materials/sci6-energy-resources-workbook-ef-v1.html`,
+  },
+  {
+    title: 'Space — Easy Read Workbook',
+    description: 'Same 24 questions as the standard Space workbook, rewritten at an easy-read level. Word banks on every question, hint boxes on all Core questions.',
+    unit: 'space',
+    unitLabel: 'Space',
+    href: `${base}materials/sci6-space-workbook-ef-v1.html`,
+  },
+  {
+    title: 'Year Review — Easy Read Workbook',
+    description: 'Same 32 questions as the standard Year Review workbook, rewritten at an easy-read level. All six units covered. Word banks and hint boxes throughout.',
+    unit: 'all-units',
+    unitLabel: 'All Units',
+    href: `${base}materials/sci6-year-review-workbook-ef-v1.html`,
+  },
+];
 ---
 
 <BaseLayout title="Materials">
@@ -422,6 +474,39 @@ const workbooks = [
       })}
     </div>
   </section>
+  <!-- Easy Read Workbooks -->
+  <section class="mb-12">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-1">Easy Read Workbooks</h2>
+    <p class="text-xs text-slate-400 mb-4">Same questions as standard workbooks — simplified language, word banks on every question, hint boxes throughout</p>
+    <div class="space-y-3">
+      {workbooksEF.map(m => {
+        const c = unitColors[m.unit] ?? unitColors['all-units'];
+        return (
+          <div class={`bg-white rounded-xl border border-slate-200 border-l-4 ${c.border} p-5 flex items-start justify-between gap-4`}>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${c.bg} ${c.text}`}>
+                  {m.unitLabel}
+                </span>
+                <span class="text-xs font-bold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 tracking-wide">Easy Read</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-1">{m.title}</h3>
+              <p class="text-sm text-slate-500">{m.description}</p>
+            </div>
+            <a
+              href={m.href}
+              target="_blank"
+              rel="noopener"
+              class="flex-shrink-0 text-sm font-semibold text-science-700 hover:text-science-900 border border-science-300 hover:border-science-500 px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+            >
+              Open ↗
+            </a>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+
   <!-- Notes Answer Keys -->
   <section class="mb-12">
     <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-1">Answer Keys — Notes</h2>
