@@ -12,20 +12,18 @@ misconceptions:
 csConnection: Radars, weather satellites, and computer modelling are already embedded in the curriculum — this is the computational artifacts for societal needs CS concept in context.
 ---
 
-## What this unit is about
+Alberta's glaciers have lost more than half their volume in the last century. Some are expected to disappear entirely within a generation. The people who have lived in those mountain valleys for thousands of years have watched this happen — and their observations, passed down through story and memory, are part of the scientific record.
 
-Weather is what happens outside today. Climate is the bigger pattern — what a place is like over many years. They are not the same thing.
+This unit is about understanding what is changing, why, and what that means for the place we live.
 
-Earth's climate is changing. In this unit, you will learn why. You will look at natural causes and human causes. You will look at what is already happening here in Alberta.
+## What you will explore
 
-Scientists use data to track climate. Indigenous Knowledge Keepers use generations of observation. Both are important. This unit takes both seriously.
+You will start with a distinction that matters: **weather** is what happens today. **Climate** is the pattern over decades. Confusing them — pointing to one cold winter as proof that warming isn't real — is one of the most common mistakes people make when thinking about this topic.
 
-## What you will learn
+From there, you will work through what shapes a region's climate (latitude, distance from the ocean, elevation, and greenhouse gases), what the greenhouse effect actually is (and why it is not the same as the ozone hole), and what drives climate change — both the natural causes that have always existed and the human causes that have accelerated in the last 150 years.
 
-1. **What shapes climate** — the Sun warms the Earth. Greenhouse gases trap some of that heat. Where you live — how far north, how close to water, how high up — shapes your local climate.
+You will look at what is already changing in Alberta specifically: wildfire seasons, glacier retreat, shifting growing seasons, and the effects on Indigenous communities whose way of life is tied to the land. You will also explore how we measure climate — through satellites and ice cores, and through the generations of ecological observation that Indigenous Knowledge Keepers carry.
 
-2. **What causes climate change** — some causes are natural: volcanoes, shifts in Earth's orbit. Some causes are human: burning fossil fuels adds greenhouse gases to the air.
+## By the end of this unit
 
-3. **What is already changing** — more wildfires. Glaciers melting. Seasons shifting. These changes affect how people, animals, and plants live — including Indigenous communities who depend on the land.
-
-4. **How we measure it** — scientists use thermometers, ice cores, and satellites. Elders and Knowledge Keepers use stories and memory passed down through generations. Together, they give us a fuller picture.
+You will be able to explain what causes climate change, distinguish between weather and climate, and understand why the changes happening now are different from natural climate variation — and why that matters for Alberta in particular.

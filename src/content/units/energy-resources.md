@@ -11,18 +11,18 @@ misconceptions:
 csConnection: Technology is both an energy consumer and an energy enabler. Impacts of technology — environmental, social, economic — are examined directly through Alberta's energy context.
 ---
 
-## What this unit is about
+Alberta sits on one of the largest oil reserves in the world. It also has some of the best wind and solar potential in Canada. Both of those things are true at the same time — and they create a real tension that Alberta is actively trying to navigate.
 
-Everything you do uses energy. Turning on a light. Heating your home. Riding in a car. Where does that energy come from?
+This unit is about understanding that tension. Not solving it, but understanding it well enough to think clearly about it.
 
-Alberta is one of the biggest energy producers in the world. That is a big deal. It also means the choices Alberta makes about energy matter — for the environment, for communities, and for the future.
+## What you will explore
 
-In this unit, you will learn about different energy resources and how to think about choosing between them. There is no perfect energy source. Every choice has trade-offs.
+You will learn the difference between **renewable** and **non-renewable** energy sources — not just what the words mean, but what the difference actually implies for how long we can rely on each one. You will look at how energy sources get used (some go straight to work; others are converted first) and why "renewable" does not automatically mean "clean" or "simple."
 
-## What you will learn
+The centre of the unit is a decision-making framework: five factors that engineers, governments, and communities use when choosing an energy source — availability, cost, reliability, environmental impact, and responsible management. You will apply these factors to real cases, including Alberta's own energy decisions.
 
-1. **Renewable and non-renewable** — some resources run out (coal, oil, gas). Some can be replaced (wind, sunlight, water). Knowing the difference is the starting point.
+You will also look at who is most affected when energy choices go wrong — including Indigenous communities whose treaty rights and traditional lands intersect with pipelines, oil sands, and hydroelectric dams.
 
-2. **Before and after processing** — some energy sources are used right away (burn the wood, spin the turbine). Others are turned into electricity first. Wind is interesting — it can be used both ways.
+## By the end of this unit
 
-3. **How to pick an energy resource** — you will use five questions: Is it available here? How does it affect people? What does it cost? What does it do to the environment? Are we managing it responsibly? Alberta's own energy decisions are the case study.
+You will be able to compare energy sources using real criteria, explain why there is no perfect option, and make a supported case for an energy choice — the kind of thinking that actual engineers and policy-makers do.

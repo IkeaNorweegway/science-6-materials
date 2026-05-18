@@ -12,18 +12,18 @@ misconceptions:
 csConnection: Telescopes, probes, rovers, spacecraft, and computer modelling are how we know what we know about space. Alberta's own satellite — Ex-Alta 1 — was designed by University of Alberta students.
 ---
 
-## What this unit is about
+If the Sun were the size of a basketball, Earth would be a small marble about 30 metres away. Neptune would be nearly a kilometre down the road. The nearest star beyond our Sun would be in another country. Space is not just big — it is incomprehensibly big, and most images and diagrams of the solar system are lying to you about the distances.
 
-Space is big. Really, really big. If the Sun were a basketball, Earth would be a tiny speck 30 metres away. Neptune would be a kilometre down the road. And the nearest star would be in another country.
+Getting that scale right is one of the first things you will do in this unit.
 
-In this unit, you will learn what is in our solar system, how we explore it, and what it would actually take to live in space.
+## What you will explore
 
-There is an Alberta connection here. **Ex-Alta 1** is a small satellite built by students at the University of Alberta. It was launched from the International Space Station in 2017. Students like you built something that is orbiting Earth right now.
+You will map out what is actually in our solar system — the Sun, eight planets, dozens of moons, dwarf planets (Pluto is one of them now), asteroids, and comets — and learn one of the most important distinctions in astronomy: some objects **emit** their own light, and most simply **reflect** light from the Sun. Stars glow. Planets and moons borrow.
 
-## What you will learn
+You will look at how we explore a place that humans can barely reach: telescopes that see wavelengths our eyes cannot, robotic rovers on the Martian surface, probes that have left the solar system entirely, and satellites built right here in Alberta. **Ex-Alta 1**, designed and built by University of Alberta students, was launched from the International Space Station in 2017 and orbited Earth for over a year. It was built by people who were in university not long before you are now.
 
-1. **What is in our solar system** — the Sun, eight planets, moons, dwarf planets (Pluto is one of them), asteroids, and comets. Some things make their own light. Most things just reflect it. You will learn to tell the difference.
+You will also dig into what it would actually take to live in space — and why it is so much harder than movies make it look. No air. Near-zero gravity that weakens your bones and muscles. Radiation with no atmosphere to block it. The ISS is humanity's current answer to those problems, and it is an extraordinary engineering achievement.
 
-2. **How we explore space** — telescopes, probes, rovers, satellites, and computer models. Each tool answers different questions. You will figure out which tool to use for which job.
+## By the end of this unit
 
-3. **What it takes to live in space** — no air. No gravity. Radiation. Extreme cold and heat. Astronauts on the International Space Station deal with all of this every day. You will look at how — and why it is so hard.
+You will be able to describe and compare the objects in our solar system, explain how different exploration technologies are matched to different questions, and think critically about the challenges and possibilities of human life beyond Earth.

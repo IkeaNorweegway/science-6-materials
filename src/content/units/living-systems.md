@@ -13,20 +13,18 @@ misconceptions:
 csConnection: Scratch simulation of a food web uses conditional structures — if no sunlight, then no photosynthesis, then organisms cannot survive. Students code the logic of the ecosystem.
 ---
 
-## What this unit is about
+When wolves were reintroduced to Yellowstone National Park, the rivers changed shape. The wolves hunted deer. The deer stopped grazing along riverbanks. Grass grew back. The banks stabilized. The rivers stopped eroding. One species, returning to a place it had been missing, altered an entire landscape.
 
-An ecosystem is everything living and non-living in a place — the plants, the animals, the soil, the water, the sunlight. All of it is connected. Change one thing, and everything else feels it.
+That is what this unit is about: how everything in an ecosystem is connected, and what happens when one part of that connection changes.
 
-The big idea in this unit is **photosynthesis**. Plants do not eat from the soil. They make their own food using sunlight, water, and air. Almost every living thing on Earth depends on this. Getting this idea right matters.
+## What you will explore
 
-## What you will learn
+You will start with the foundational idea that most people get wrong: **plants do not eat from the soil**. They make their own food using sunlight, water, and air. This process — photosynthesis — is the base of almost every food chain on Earth, and understanding it changes how you see the living world.
 
-1. **Living and non-living** — ecosystems are made of living things (biotic) and non-living things (abiotic). Both matter. Both affect each other.
+From there, you will map out how energy moves through ecosystems: from plants to herbivores to predators, and back into the soil through decomposers. You will look at what happens when one part of that chain is removed or added — sometimes with dramatic results, like the Yellowstone wolves.
 
-2. **How plants make food** — plants use sunlight, water, and carbon dioxide to make glucose. This is photosynthesis. The plant stores the glucose and releases oxygen. That oxygen is what you breathe.
+You will also explore how Indigenous peoples have observed and maintained these relationships for thousands of years, and what traditional ecological knowledge adds to how we understand and protect ecosystems today.
 
-3. **How plants and animals need each other** — it is not just about food. Animals need plants for oxygen and shelter. Plants need animals to spread seeds and break down waste. Indigenous peoples have known and cared for these relationships for a very long time.
+## By the end of this unit
 
-4. **How living things interact** — some animals help each other. Some compete. Some eat each other. All of these relationships shape how healthy an ecosystem is.
-
-5. **How humans affect ecosystems** — people change ecosystems. Sometimes for good. Sometimes for harm. You will look at both. 
+You will be able to explain how energy flows through a food web, predict what happens when an ecosystem is disrupted, and understand why protecting biodiversity is not just about individual species — it is about keeping the whole system working. 

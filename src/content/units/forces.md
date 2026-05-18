@@ -12,20 +12,18 @@ misconceptions:
 csConnection: Force diagrams are abstractions of real interactions — students apply abstraction in design when they decide which forces to include and which to simplify away.
 ---
 
-## What this unit is about
+When a bridge holds up a fully loaded truck, nothing is moving — but forces are working hard in every beam and cable. When you push off a wall in a swimming pool, the wall pushes back and sends you flying. Forces are happening everywhere, all the time, whether things are moving or completely still.
 
-A force is a push or a pull. Forces are everywhere. When you sit in a chair, forces are at work. When you kick a ball, forces are at work. When a bridge holds up a truck, forces are at work.
+This unit is about understanding those forces — where they come from, what they do, and why things bend, stretch, snap, or bounce back.
 
-In this unit, you will learn where forces come from and what they do — both on the outside of things and on the inside.
+## What you will explore
 
-The big idea at the end of this unit is **Newton's Third Law**. It says: when you push on something, it pushes back just as hard. This sounds simple. It is actually one of the trickiest ideas in all of science.
+You will look at forces from two directions: what happens *on the outside* of things (applied force, friction, spring force) and what happens *inside* things when forces act on them (tension, compression, shear, torsion). A rope being pulled from both ends and a beam being squeezed by a load are different situations — and the forces inside them are different too.
 
-## What you will learn
+You will also explore why some materials spring back to their original shape when a force is removed (**elastic**) while others stay deformed forever (**plastic**). This is the difference between a rubber band and a bent paperclip.
 
-1. **Forces inside things** — when you push or pull on something, forces build up inside it. These are called tension, compression, shear, and torsion. They are what makes things bend, stretch, or break.
+The unit builds to **Newton's Third Law**: when you push on something, it pushes back with an equal force in the opposite direction. It sounds straightforward. It isn't. Every interaction involves two objects, and the forces act on *different* ones — which is what makes it tricky.
 
-2. **Forces on the outside** — some forces push from outside. You can apply a force. Friction slows things down. A spring can push or pull.
+## By the end of this unit
 
-3. **Elastic and plastic** — some things bounce back to their old shape when you let go (elastic). Some things stay bent or squished forever (plastic).
-
-4. **Newton's Third Law** — push on something and it pushes back. The two forces are equal. But they act on different objects. That is the part that trips people up.
+You will be able to look at a structure — a bridge, a chair, a climbing harness — and identify the forces acting on it and inside it. You will be able to explain why things break when they do, and why the ground pushing up on you is just as real as gravity pulling you down.

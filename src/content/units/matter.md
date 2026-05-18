@@ -12,20 +12,16 @@ misconceptions:
 csConnection: The particle model is itself an abstraction — a simplified version of something complex. Students learn what abstraction means through the science.
 ---
 
-## What this unit is about
+Have you ever wondered why a puddle disappears on a hot day, or why a can of pop explodes if you freeze it? The answer is the same in both cases — and it has to do with something too small to see.
 
-Everything is made of tiny pieces called particles. They are too small to see. But they are always moving.
+Everything around you is made of tiny particles. They are always moving. When things heat up, those particles move faster and spread out. When things cool down, they slow down and pack together. That one idea explains an enormous amount of the world.
 
-When things get hot, the particles speed up. When things get cold, they slow down. That is why things can be a solid, a liquid, or a gas — and why they can change from one to another.
+## What you will explore
 
-In this unit, you will learn to think like a scientist. You will use the **particle model** to explain what you see in the world around you.
+You will build and use the **particle model** — a scientific way of explaining why matter behaves the way it does. You will figure out why solids hold their shape, why liquids pour, and why gases fill whatever container they are in. You will look at how matter moves from one state to another (ice to water to steam) and why that does not actually change what the stuff *is*.
 
-## What you will learn
+You will also encounter one genuinely weird exception: **water expands when it freezes**, which is the opposite of almost every other substance. This is not a mistake. It is the reason fish survive winters under frozen lakes, and the reason ice floats instead of sinking to the bottom.
 
-1. **Particles are always moving** — heat makes them move faster. Cold makes them move slower. When they move faster, they spread out more.
+## By the end of this unit
 
-2. **Solids, liquids, and gases** — matter can change from one to another. Ice melts into water. Water boils into steam. The stuff does not change. Only the way the particles move changes.
-
-3. **Thermometers** — liquids expand when they heat up. That is how a thermometer works. 0°C is when water freezes. 100°C is when it boils.
-
-4. **One strange thing about water** — most things shrink when they get cold. Water does the opposite. When water freezes, it expands. That is why ice floats. That is why fish can survive under a frozen lake.
+You will be able to explain everyday events — why a thermometer works, why bridges have expansion gaps, why a balloon shrinks in the cold — using a model that scientists actually use. You will know how to tell the difference between a physical change (melting ice) and what stays the same underneath it.
