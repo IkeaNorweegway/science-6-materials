@@ -5,7 +5,7 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   integrations: [tailwind(), mdx()],
   site: 'https://ikeanorweegway.github.io',
-  base: '/science-6-materials/',
+  base: '/science-6/',
   markdown: {
     shikiConfig: {
       theme: 'github-light',
